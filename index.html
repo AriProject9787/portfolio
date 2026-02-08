@@ -94,9 +94,11 @@
     header img {
       width: 150px;
       height: 150px;
+      object-fit: cover;
+
       border-radius: 50%;
-      border: 4px solid #00f7ff;
-      margin-bottom: 20px;
+      border: 2px solid #00f7ff;
+      margin-bottom: 10px;
       animation: glow 2s infinite alternate;
     }
 
@@ -476,6 +478,7 @@
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="res/certification.html">Certifications</a></li>
       <li><a href="#achievements">Achievements</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -484,7 +487,7 @@
 
   <!-- Header -->
   <header data-aos="fade-down">
-    <img src="res/profile.jpg" alt="Profile Picture of Arirama Selvam M">
+    <img src="res/profile.png" alt="Profile Picture of Arirama Selvam M">
     <h1>Arirama Selvam M</h1>
     <p>Computer Science Engineer | Freelancer | Futuristic Web & Software Developer</p>
     <p class="tagline">Let’s build something futuristic together!</p>
@@ -540,7 +543,7 @@
       <div class="card" data-title="Document Verification System"
         data-desc="AI-powered document verification system using Python and Streamlit for authenticating marksheets and IDs.">
         <a href="https://ari-document-verfication.streamlit.app/" style="text-decoration: none;">
-          <h3>Document Verification System</h3>
+          <h3 style="color: #e0e0e0;">Document Verification System</h3>
           <p>AI-powered document verification system using Python and Streamlit.</p>
       </div>
       <div class="card" data-title="Online Food Ordering & Billing System"
@@ -553,9 +556,11 @@
 
       <div class="card" data-title="Voice Assistant App"
         data-desc="Android assistant using Picovoice SDK for wake-word detection, commands, and smart reminders.">
-        <a href="https://ariproject9787.github.io/portfolio/Readme.md" style="text-decoration: none;"></a>
-        <h3>Voice Assistant App</h3>
-        <p>Hands-free voice-controlled assistant.</p>
+        <a href="https://github.com/AriProject9787/linuxAutomationCheck/blob/main/README.md"
+          style="text-decoration: none;">
+          <h3 style="color: #e0e0e0;">Voice Assistant App</h3>
+          <p>Hands-free voice-controlled assistant.</p>
+        </a>
       </div>
       <div class="card" data-title="Automation Scripts Suite"
         data-desc="15+ automation scripts for data processing, scraping, and reporting.">
@@ -668,77 +673,43 @@
 
     // Initialize positions and velocities
     skills.forEach(skill => {
+      // Ensure we have valid dimensions
+      const containerWidth = container.clientWidth || 300;
+      const containerHeight = container.clientHeight || 500;
+
       // Random initial position
-      let x = Math.random() * (container.clientWidth - 70);
-      let y = Math.random() * (container.clientHeight - 70);
+      let x = Math.random() * (containerWidth - 70);
+      let y = Math.random() * (containerHeight - 70);
+
       // Reduced velocity for slow, smooth movement
-      let dx = (Math.random() - 0.5) * 0.8; // Speed between -0.4 and 0.4
+      let dx = (Math.random() - 0.5) * 0.8;
       let dy = (Math.random() - 0.5) * 0.8;
 
       circles.push({ element: skill, x, y, dx, dy });
 
-      // Set initial transform
-      skill.style.transform = `translate3d(var(--x, 0), var(--y, 0), 0)`;
-    });
-
-    function animateSkills() {
-      circles.forEach(circle => {
-        // Update position
-        circle.x += circle.dx;
-        circle.y += circle.dy;
-
-        // Boundary collision
-        if (circle.x <= 0 || circle.x + 70 >= container.clientWidth) {
-          circle.dx = -circle.dx;
-          circle.x = Math.max(0, Math.min(circle.x, container.clientWidth - 70)); // Clamp to bounds
-        }
-        if (circle.y <= 0 || circle.y + 70 >= container.clientHeight) {
-          circle.dy = -circle.dy;
-          circle.y = Math.max(0, Math.min(circle.y, container.clientHeight - 70)); // Clamp to bounds
-        }
-
-        // Apply position using transform for GPU acceleration
-        // Note: We need to maintain the hover scale effect, so we handle that in CSS
-        // But since we are setting transform here, it might conflict with CSS hover transform: scale(1.2).
-        // Solution: Apply the translation here. The hover scale can be applied to an inner wrapper or we can handle it here.
-        // Simpler approach: Just use translate3d here. If hover breaks, we'll fix it.
-        // Actually, inline transform overrides CSS hover transform. 
-        // Fix: Apply the translation to the element, and put the content inside a wrapper that scales on hover? 
-        // OR: Check if hovered in JS.
-
-        // Better Fix: Use top/left for position (slower but compatible with simple CSS hover scale) OR
-        // Use a wrapper div for the animation and the inner div for the hover effect.
-        // Let's try the wrapper approach? No, that requires HTML changes.
-        // Let's stick to top/left for now but with reduced speed as requested. 
-        // The user asked for "smooth and slow". top/left with sub-pixel values is okay-ish, but transform is better.
-        // Let's use transform and handle hover scale in JS or use a CSS variable.
-
-        circle.element.style.transform = `translate3d(${circle.x}px, ${circle.y}px, 0)`;
-      });
-      requestAnimationFrame(animateSkills);
-    }
-
-    // Fix for hover scale conflict: 
-    // We can use a CSS variable for the translation, and combine it with scale in CSS.
-    // circle.element.style.setProperty('--x', `${circle.x}px`);
-    // circle.element.style.setProperty('--y', `${circle.y}px`);
-    // CSS: transform: translate3d(var(--x), var(--y), 0) scale(1);
-    // CSS Hover: transform: translate3d(var(--x), var(--y), 0) scale(1.2);
-
-    // Let's implement the CSS variable approach for best performance and compatibility.
-
-    // Re-initializing to use CSS variables
-    skills.forEach(skill => {
-      skill.style.transform = `translate3d(var(--x, 0), var(--y, 0), 0)`;
+      // Set initial position immediately to prevent "blank" start (overlapping at 0,0)
+      skill.style.setProperty('--x', `${x}px`);
+      skill.style.setProperty('--y', `${y}px`);
+      skill.style.transform = `translate3d(var(--x), var(--y), 0)`;
     });
 
     function animateSkillsOptimized() {
+      const width = container.clientWidth;
+      const height = container.clientHeight;
+
       circles.forEach(circle => {
         circle.x += circle.dx;
         circle.y += circle.dy;
 
-        if (circle.x <= 0 || circle.x + 70 >= container.clientWidth) circle.dx = -circle.dx;
-        if (circle.y <= 0 || circle.y + 70 >= container.clientHeight) circle.dy = -circle.dy;
+        // Boundary collision detection
+        if (circle.x <= 0 || circle.x + 70 >= width) {
+          circle.dx = -circle.dx;
+          circle.x = Math.max(0, Math.min(circle.x, width - 70));
+        }
+        if (circle.y <= 0 || circle.y + 70 >= height) {
+          circle.dy = -circle.dy;
+          circle.y = Math.max(0, Math.min(circle.y, height - 70));
+        }
 
         circle.element.style.setProperty('--x', `${circle.x}px`);
         circle.element.style.setProperty('--y', `${circle.y}px`);
@@ -746,66 +717,18 @@
       requestAnimationFrame(animateSkillsOptimized);
     }
 
-    // Handle window resize
+    // Handle window resize - keep logos inside container
     window.addEventListener('resize', () => {
+      const width = container.clientWidth;
+      const height = container.clientHeight;
       circles.forEach(circle => {
-        circle.x = Math.min(circle.x, container.clientWidth - 70);
-        circle.y = Math.min(circle.y, container.clientHeight - 70);
+        circle.x = Math.min(circle.x, width - 70);
+        circle.y = Math.min(circle.y, height - 70);
       });
     });
 
     // Start animation
     animateSkillsOptimized();
-
-    // Projects Auto-Scroll
-    const projectsGrid = document.querySelector('#projects .grid');
-    let isPaused = false;
-    let projectDirection = 1; // 1 for right, -1 for left
-
-    // Pause on hover
-    projectsGrid.addEventListener('mouseenter', () => isPaused = true);
-    projectsGrid.addEventListener('mouseleave', () => isPaused = false);
-
-    function autoScrollProjects() {
-      if (!isPaused) {
-        projectsGrid.scrollLeft += projectDirection;
-
-        // Ping-pong logic
-        if (projectsGrid.scrollLeft + projectsGrid.clientWidth >= projectsGrid.scrollWidth - 1) {
-          projectDirection = -1; // Reverse to left
-        } else if (projectsGrid.scrollLeft <= 0) {
-          projectDirection = 1; // Reverse to right
-        }
-      }
-      requestAnimationFrame(autoScrollProjects);
-    }
-
-    // Start auto-scroll
-    autoScrollProjects();
-
-    // Services Auto-Scroll (Duplicate logic for services)
-    const servicesGrid = document.querySelector('#services .grid');
-    let isServicesPaused = false;
-    let serviceDirection = 1;
-
-    servicesGrid.addEventListener('mouseenter', () => isServicesPaused = true);
-    servicesGrid.addEventListener('mouseleave', () => isServicesPaused = false);
-
-    function autoScrollServices() {
-      if (!isServicesPaused) {
-        servicesGrid.scrollLeft += serviceDirection;
-
-        // Ping-pong logic
-        if (servicesGrid.scrollLeft + servicesGrid.clientWidth >= servicesGrid.scrollWidth - 1) {
-          serviceDirection = -1;
-        } else if (servicesGrid.scrollLeft <= 0) {
-          serviceDirection = 1;
-        }
-      }
-      requestAnimationFrame(autoScrollServices);
-    }
-
-    autoScrollServices();
   </script>
 
 </body>
