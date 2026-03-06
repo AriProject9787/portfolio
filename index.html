@@ -46,34 +46,219 @@
       transition: background 0.3s, color 0.3s;
     }
 
+    /* ===== Light Mode – Professional Palette ===== */
     body.light-mode {
-      background: #f8fafc;
-      color: #1f2937;
+      background: #e8ecf2;
+      color: #1e293b;
     }
 
+    /* Header */
     body.light-mode header {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(8px);
+      background: rgba(232, 236, 242, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(14, 116, 144, 0.15);
     }
 
-    body.light-mode .card {
-      background: #ffffff;
-      border: 1px solid rgba(37, 99, 235, 0.2);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    body.light-mode header h1 {
+      color: #0f172a;
     }
 
-    body.light-mode .drawer a {
-      color: #2563eb;
+    body.light-mode header p {
+      color: #475569;
     }
 
+    body.light-mode header .tagline {
+      color: #0e7490;
+    }
+
+    /* Headings */
+    body.light-mode h2 {
+      color: #0e7490;
+      text-shadow: none;
+    }
+
+    body.light-mode h3 {
+      color: #1e293b;
+    }
+
+    /* Buttons */
     body.light-mode .btn {
-      background: #2563eb;
+      background: #0e7490;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(14, 116, 144, 0.3);
+    }
+
+    body.light-mode .btn:hover {
+      background: #155e75;
       color: #ffffff;
     }
 
+    /* Navigation drawer */
+    body.light-mode .drawer {
+      background: rgba(237, 241, 248, 0.98);
+      box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    body.light-mode .drawer a {
+      color: #0e7490;
+    }
+
+    body.light-mode .drawer a:hover {
+      color: #0f172a;
+    }
+
+    /* Cards */
+    body.light-mode .card {
+      background: #f2f6fb;
+      border: 1px solid #dce3ed;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    body.light-mode .card:hover {
+      border-color: #0e7490;
+      box-shadow: 0 8px 24px rgba(14, 116, 144, 0.18);
+      transform: translateY(-8px);
+    }
+
+    body.light-mode .card h3 {
+      color: #0f172a;
+    }
+
+    body.light-mode .card p {
+      color: #475569;
+    }
+
+    /* Inline colour override for card links */
+    body.light-mode .card a h3,
+    body.light-mode .card h3[style] {
+      color: #0f172a !important;
+    }
+
+    /* About paragraph */
+    body.light-mode section p {
+      color: #334155;
+    }
+
+    /* Skills */
+    body.light-mode .skills-container {
+      border-color: rgba(14, 116, 144, 0.4);
+      box-shadow: 0 0 20px rgba(14, 116, 144, 0.12),
+        inset 0 0 20px rgba(14, 116, 144, 0.05);
+    }
+
+    body.light-mode .skill-circle {
+      background: #f1f5f9;
+      border: 1px solid #c4d0de;
+    }
+
+    body.light-mode .skill-circle i {
+      color: #334155;
+    }
+
+    body.light-mode .skill-circle:hover {
+      box-shadow: 0 0 15px rgba(14, 116, 144, 0.35);
+      border-color: #0e7490;
+    }
+
+    body.light-mode .skill-circle:hover i {
+      color: #0e7490;
+      text-shadow: none;
+    }
+
+    body.light-mode .skill-circle:hover span {
+      color: #0e7490;
+      text-shadow: none;
+    }
+
+    /* Contact */
+    body.light-mode .contact-box {
+      background: #f2f6fb;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+      border: 1px solid #dce3ed;
+    }
+
+    body.light-mode .contact-input {
+      background: #e8ecf2;
+      color: #1e293b;
+      border: 1px solid #c4d0de;
+    }
+
+    body.light-mode .contact-input::placeholder {
+      color: #94a3b8;
+    }
+
+    body.light-mode .contact-box a {
+      color: #0e7490;
+    }
+
+    body.light-mode .contact-box p {
+      color: #334155;
+    }
+
+    /* Scrollbar in carousels */
+    body.light-mode #projects .grid,
+    body.light-mode #services .grid,
+    body.light-mode .cert-scroll {
+      scrollbar-color: #0e7490 #e2e8f0;
+    }
+
+    /* Certifications */
+    body.light-mode .cert-card {
+      background: #f2f6fb;
+      border-color: #c4d0de;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+
+    body.light-mode .cert-card:hover {
+      box-shadow: 0 8px 24px rgba(14, 116, 144, 0.25);
+      border-color: #0e7490;
+    }
+
+    body.light-mode .cert-card .cert-label {
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent);
+      color: #f1f5f9;
+    }
+
+    body.light-mode #certifications .cert-category h3 {
+      color: #0e7490;
+      text-shadow: none;
+    }
+
+    /* Mode toggle button */
+    body.light-mode .mode-toggle {
+      background: #0e7490;
+      color: #ffffff;
+    }
+
+    /* Footer */
     body.light-mode footer {
-      background: #e5e7eb;
-      color: #374151;
+      background: #e2e8f0;
+      color: #475569;
+    }
+
+    body.light-mode footer span {
+      color: #0e7490 !important;
+    }
+
+    /* Contact Section Base Styles */
+    .contact-box {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px rgba(0, 247, 255, 0.3);
+    }
+
+    .contact-input {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
     }
 
     canvas#bg {
@@ -410,6 +595,147 @@
       box-shadow: 0 0 15px #00f7ff;
     }
 
+    /* ======= Certifications Section ======= */
+    #certifications .cert-category {
+      margin-bottom: 40px;
+    }
+
+    #certifications .cert-category h3 {
+      text-align: center;
+      color: #00f7ff;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      text-shadow: 0 0 8px rgba(0, 247, 255, 0.5);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .cert-scroll {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 18px;
+      padding: 10px 4px 18px;
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: #00f7ff rgba(255, 255, 255, 0.05);
+    }
+
+    .cert-scroll::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .cert-scroll::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 4px;
+    }
+
+    .cert-scroll::-webkit-scrollbar-thumb {
+      background: #00f7ff;
+      border-radius: 4px;
+    }
+
+    .cert-card {
+      flex: 0 0 220px;
+      height: 155px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 247, 255, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      background: rgba(255, 255, 255, 0.04);
+      position: relative;
+    }
+
+    .cert-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 0 22px rgba(0, 247, 255, 0.5);
+      border-color: #00f7ff;
+    }
+
+    .cert-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .cert-card .cert-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+      color: #e0e0e0;
+      font-size: 0.72rem;
+      padding: 8px 10px 6px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-weight: 600;
+    }
+
+    .cert-card:hover .cert-label {
+      opacity: 1;
+    }
+
+    .cert-view-all {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* Lightbox / Modal */
+    .cert-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(6px);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .cert-modal.active {
+      display: flex;
+    }
+
+    .cert-modal img {
+      max-width: 90vw;
+      max-height: 88vh;
+      border-radius: 14px;
+      border: 2px solid #00f7ff;
+      box-shadow: 0 0 40px rgba(0, 247, 255, 0.45);
+      transition: transform 0.3s;
+    }
+
+    .cert-modal-close {
+      position: fixed;
+      top: 20px;
+      right: 24px;
+      color: #00f7ff;
+      font-size: 2.2rem;
+      cursor: pointer;
+      font-weight: bold;
+      line-height: 1;
+      transition: color 0.2s, transform 0.2s;
+      z-index: 10000;
+      background: none;
+      border: none;
+    }
+
+    .cert-modal-close:hover {
+      color: #fff;
+      transform: rotate(90deg) scale(1.1);
+    }
+
+
+
     footer {
       text-align: center;
       padding: 20px;
@@ -478,7 +804,7 @@
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="res/certification.html">Certifications</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#achievements">Achievements</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -576,6 +902,111 @@
     </div>
   </section>
 
+  <!-- Certifications Section -->
+  <section id="certifications" data-aos="fade-up">
+    <h2>Certifications</h2>
+
+    <!-- Programming & Web Development -->
+    <div class="cert-category">
+      <h3>🖥️ Programming &amp; Web Development</h3>
+      <div class="cert-scroll">
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/html-cert.png">
+          <img src="res/certificates/AriCertificate--main/eduprep/html-cert.png" alt="HTML Certificate" loading="lazy">
+          <div class="cert-label">HTML</div>
+        </div>
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/JavaScript-cert.png">
+          <img src="res/certificates/AriCertificate--main/eduprep/JavaScript-cert.png" alt="JavaScript Certificate"
+            loading="lazy">
+          <div class="cert-label">JavaScript</div>
+        </div>
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/php-cert.png">
+          <img src="res/certificates/AriCertificate--main/eduprep/php-cert.png" alt="PHP Certificate" loading="lazy">
+          <div class="cert-label">PHP</div>
+        </div>
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/mysql-cert.png">
+          <img src="res/certificates/AriCertificate--main/eduprep/mysql-cert.png" alt="MySQL Certificate"
+            loading="lazy">
+          <div class="cert-label">MySQL</div>
+        </div>
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/python-cert.png">
+          <img src="res/certificates/AriCertificate--main/eduprep/python-cert.png" alt="Python Certificate"
+            loading="lazy">
+          <div class="cert-label">Python</div>
+        </div>
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/java-cert.png">
+          <img src="res/certificates/AriCertificate--main/eduprep/java-cert.png" alt="Java Certificate" loading="lazy">
+          <div class="cert-label">Java</div>
+        </div>
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/c-cert.png">
+          <img src="res/certificates/AriCertificate--main/eduprep/c-cert.png" alt="C Programming Certificate"
+            loading="lazy">
+          <div class="cert-label">C Programming</div>
+        </div>
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/oops-cert.png">
+          <img src="res/certificates/AriCertificate--main/eduprep/oops-cert.png" alt="OOPS Certificate" loading="lazy">
+          <div class="cert-label">OOP Concepts</div>
+        </div>
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/unity-cert.png">
+          <img src="res/certificates/AriCertificate--main/eduprep/unity-cert.png" alt="Unity Certificate"
+            loading="lazy">
+          <div class="cert-label">Unity</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cybersecurity -->
+    <div class="cert-category">
+      <h3>🛡️ Cybersecurity</h3>
+      <div class="cert-scroll">
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/novitech/novitech_cyber_security-1.png">
+          <img src="res/certificates/AriCertificate--main/novitech/novitech_cyber_security-1.png"
+            alt="Novitech Cybersecurity" loading="lazy">
+          <div class="cert-label">Cybersecurity – Novitech</div>
+        </div>
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/corizo/arirama_selvam_cyber-1.png">
+          <img src="res/certificates/AriCertificate--main/corizo/arirama_selvam_cyber-1.png"
+            alt="Cybersecurity – Corizo" loading="lazy">
+          <div class="cert-label">Cybersecurity – Corizo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI & Machine Learning -->
+    <div class="cert-category">
+      <h3>🤖 AI &amp; Machine Learning</h3>
+      <div class="cert-scroll">
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/pantech/ai_internship-1.png">
+          <img src="res/certificates/AriCertificate--main/pantech/ai_internship-1.png" alt="AI Internship – Pantech"
+            loading="lazy">
+          <div class="cert-label">AI Internship – Pantech</div>
+        </div>
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/pantech/Ml_Internship_Certificate-1.png">
+          <img src="res/certificates/AriCertificate--main/pantech/Ml_Internship_Certificate-1.png"
+            alt="ML Internship – Pantech" loading="lazy">
+          <div class="cert-label">ML Internship – Pantech</div>
+        </div>
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/pantech/python_cert-1.png">
+          <img src="res/certificates/AriCertificate--main/pantech/python_cert-1.png" alt="Python – Pantech"
+            loading="lazy">
+          <div class="cert-label">Python – Pantech</div>
+        </div>
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/guvi/Ai_chatgpt.png">
+          <img src="res/certificates/AriCertificate--main/guvi/Ai_chatgpt.png" alt="AI & ChatGPT – GUVI" loading="lazy">
+          <div class="cert-label">AI &amp; ChatGPT – GUVI</div>
+        </div>
+        <div class="cert-card" data-src="res/certificates/AriCertificate--main/college/power%20bi%20certificate%20.png">
+          <img src="res/certificates/AriCertificate--main/college/power%20bi%20certificate%20.png"
+            alt="Power BI Certificate" loading="lazy">
+          <div class="cert-label">Power BI</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-view-all">
+      <a href="res/certification.html" class="btn">View All Certificates &rarr;</a>
+    </div>
+  </section>
+
   <section id="achievements" data-aos="fade-up">
     <h2>Achievements</h2>
     <div class="grid">
@@ -619,15 +1050,11 @@
 
   <section id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
-    <div
-      style="max-width:600px;margin:auto;background:rgba(255,255,255,0.05);padding:30px;border-radius:15px;backdrop-filter:blur(10px);box-shadow:0 0 15px rgba(0,247,255,0.3);">
+    <div class="contact-box">
       <form action="https://formspree.io/f/mrblegbd" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required
-          style="width:100%;margin-bottom:15px;padding:10px;border:none;border-radius:8px;background:rgba(255,255,255,0.1);color:#fff;">
-        <input type="email" name="email" placeholder="Your Email" required
-          style="width:100%;margin-bottom:15px;padding:10px;border:none;border-radius:8px;background:rgba(255,255,255,0.1);color:#fff;">
-        <textarea name="message" rows="5" placeholder="Your Message" required
-          style="width:100%;margin-bottom:15px;padding:10px;border:none;border-radius:8px;background:rgba(255,255,255,0.1);color:#fff;"></textarea>
+        <input type="text" name="name" placeholder="Your Name" required class="contact-input">
+        <input type="email" name="email" placeholder="Your Email" required class="contact-input">
+        <textarea name="message" rows="5" placeholder="Your Message" required class="contact-input"></textarea>
         <button type="submit"
           style="width:100%;padding:12px;background:#00f7ff;color:#0d0d0d;border:none;border-radius:8px;font-weight:bold;cursor:pointer;transition:0.3s;">Send
           Message</button>
@@ -657,6 +1084,13 @@
 
     <!-- <iframe width="95%" height="400" src="https://lookerstudio.google.com/embed/reporting/2aff3e4e-0800-4ed2-af9d-2eb47d4d2eed/page/kIV1C" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe> -->
   </center>
+
+  <!-- Certificate Lightbox Modal -->
+  <div class="cert-modal" id="certModal" role="dialog" aria-modal="true" aria-label="Certificate Viewer">
+    <button class="cert-modal-close" id="certModalClose" aria-label="Close">&times;</button>
+    <img id="certModalImg" src="" alt="Certificate Full View">
+  </div>
+
   <footer>
     <p>&copy; 2025 <span style="color:#00f7ff;">Arirama Selvam M</span> | All Rights Reserved</p>
   </footer>
@@ -729,6 +1163,33 @@
 
     // Start animation
     animateSkillsOptimized();
+
+    // ======= Certificate Lightbox =======
+    const certModal = document.getElementById('certModal');
+    const certModalImg = document.getElementById('certModalImg');
+    const certModalClose = document.getElementById('certModalClose');
+
+    document.querySelectorAll('.cert-card').forEach(card => {
+      card.addEventListener('click', () => {
+        certModalImg.src = card.dataset.src;
+        certModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeCertModal() {
+      certModal.classList.remove('active');
+      certModalImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    certModalClose.addEventListener('click', closeCertModal);
+    certModal.addEventListener('click', e => {
+      if (e.target === certModal) closeCertModal();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeCertModal();
+    });
   </script>
 
 </body>
