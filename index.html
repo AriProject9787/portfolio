@@ -37,19 +37,59 @@
       font-family: 'Poppins', sans-serif;
     }
 
+    :root {
+      --primary: #00f7ff;
+      --primary-dark: #00c3c9;
+      --bg-dark: #0a0a0c;
+      --bg-card: rgba(255, 255, 255, 0.03);
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --glass-border: rgba(0, 247, 255, 0.15);
+      --accent-gradient: linear-gradient(135deg, #00f7ff, #0066ff);
+    }
+
     body {
-      background: #0d0d0d;
-      color: #e0e0e0;
+      background: var(--bg-dark);
+      color: var(--text-main);
       overflow-x: hidden;
       line-height: 1.6;
       position: relative;
-      transition: background 0.3s, color 0.3s;
+      transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s;
+      cursor: none; /* Hide default cursor */
+    }
+
+    /* Custom Cursor */
+    .custom-cursor {
+      width: 20px;
+      height: 20px;
+      background: var(--primary);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 10000;
+      transition: transform 0.1s ease-out, background 0.3s ease;
+      mix-blend-mode: difference;
+    }
+
+    .custom-cursor.hover {
+      transform: scale(3);
+      background: #fff;
     }
 
     /* ===== Light Mode – Professional Palette ===== */
     body.light-mode {
-      background: #e8ecf2;
-      color: #1e293b;
+      background: #e1e8f0;
+      color: #0f172a;
+    }
+
+    /* Hide custom cursor on devices that don't support hover (touch) */
+    @media (hover: none) and (pointer: coarse) {
+      .custom-cursor {
+        display: none;
+      }
+      body {
+        cursor: auto;
+      }
     }
 
     /* Header */
@@ -277,14 +317,18 @@
     }
 
     header img {
-      width: 150px;
-      height: 150px;
+      width: 180px;
+      height: 180px;
       object-fit: cover;
-
       border-radius: 50%;
-      border: 2px solid #00f7ff;
-      margin-bottom: 10px;
+      border: 3px solid var(--primary);
+      margin-bottom: 20px;
       animation: glow 2s infinite alternate;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    header img:hover {
+      transform: scale(1.1) rotate(2deg);
     }
 
     @keyframes glow {
@@ -315,18 +359,25 @@
     .btn {
       display: inline-block;
       margin: 15px 10px;
-      padding: 10px 20px;
-      background: #00f7ff;
+      padding: 12px 28px;
+      background: var(--accent-gradient);
       color: #0d0d0d;
-      border-radius: 30px;
+      border-radius: 50px;
       text-decoration: none;
       font-weight: 600;
-      transition: 0.3s;
+      letter-spacing: 0.5px;
+      box-shadow: 0 10px 20px -5px rgba(0, 247, 255, 0.3);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      will-change: transform;
     }
 
     .btn:hover {
-      background: #fff;
-      color: #00f7ff;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 25px -5px rgba(0, 247, 255, 0.5);
+      filter: brightness(1.1);
+      color: #0d0d0d;
     }
 
     /* Light/Dark Mode Toggle */
@@ -434,9 +485,12 @@
 
     h2 {
       text-align: center;
-      margin-bottom: 30px;
-      color: #00f7ff;
-      text-shadow: 0 0 10px #00f7ff;
+      margin-bottom: 40px;
+      color: var(--primary);
+      text-shadow: 0 0 20px rgba(0, 247, 255, 0.3);
+      font-weight: 700;
+      font-size: 2.2rem;
+      letter-spacing: -0.02em;
     }
 
     .grid {
@@ -516,8 +570,14 @@
     .skill-circle:hover span {
       opacity: 1;
       display: block;
-      color: #00f7ff;
-      text-shadow: 0 0 5px #00f7ff;
+      color: var(--primary);
+      text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+    }
+
+    /* Floating Base Animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0); }
+      50% { transform: translateY(-10px) rotate(2deg); }
     }
 
     /* Removed CSS Animations for JS control */
@@ -560,23 +620,19 @@
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 20px;
-      border-radius: 15px;
-      backdrop-filter: blur(10px);
-      transition: 0.3s;
-      border: 1px solid rgba(0, 247, 255, 0.2);
-      /* Fixed dimensions for uniformity */
-      flex: 0 0 300px;
-      /* Fixed width */
-      height: 150px;
-      width: 350px;
-      /* Fixed height */
+      background: rgba(255, 255, 255, 0.03);
+      padding: 24px;
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid rgba(0, 247, 255, 0.1);
+      flex: 0 0 320px;
+      height: 160px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       overflow: hidden;
-      /* Prevent content spill */
+      box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.2);
     }
 
     .card h3 {
@@ -785,6 +841,7 @@
 </head>
 
 <body>
+  <div class="custom-cursor" id="custom-cursor"></div>
   <canvas id="bg"></canvas>
 
   <!-- Mode Toggle -->
@@ -813,7 +870,7 @@
 
   <!-- Header -->
   <header data-aos="fade-down">
-    <img src="res/profile.png" alt="Profile Picture of Arirama Selvam M">
+    <img src="res/hari.jpeg" alt="Profile Picture of Arirama Selvam M">
     <h1>Arirama Selvam M</h1>
     <p>Computer Science Engineer | Freelancer | Futuristic Web & Software Developer</p>
     <p class="tagline">Let’s build something futuristic together!</p>
@@ -1051,7 +1108,7 @@
   <section id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
     <div class="contact-box">
-      <form action="https://formspree.io/f/mrblegbd" method="POST">
+      <form id="contactForm" action="https://formspree.io/f/mrblegbd" method="POST">
         <input type="text" name="name" placeholder="Your Name" required class="contact-input">
         <input type="email" name="email" placeholder="Your Email" required class="contact-input">
         <textarea name="message" rows="5" placeholder="Your Message" required class="contact-input"></textarea>
@@ -1099,7 +1156,85 @@
   <script src="https://cdn.jsdelivr.net/gh/AriProject9787/MasterControl@main/script/script.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/AriProject9787/MasterControl@main/script/encScript.js"></script>
 
-  <script>
+  <script type="module">
+    // ======= Interactive Particle Background =======
+    const canvas = document.getElementById('bg');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let mouse = { x: null, y: null, radius: 150 };
+
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = e.x;
+      mouse.y = e.y;
+    });
+
+    function initCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      particles = [];
+      const numberOfParticles = (canvas.width * canvas.height) / 9000;
+      for (let i = 0; i < numberOfParticles; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.baseX = this.x;
+        this.baseY = this.y;
+        this.density = (Math.random() * 30) + 1;
+        this.color = '#00f7ff';
+      }
+      draw() {
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.fill();
+      }
+      update() {
+        let dx = mouse.x - this.x;
+        let dy = mouse.y - this.y;
+        let distance = Math.sqrt(dx * dx + dy * dy);
+        let forceDirectionX = dx / distance;
+        let forceDirectionY = dy / distance;
+        let maxDistance = mouse.radius;
+        let force = (maxDistance - distance) / maxDistance;
+        let directionX = forceDirectionX * force * this.density;
+        let directionY = forceDirectionY * force * this.density;
+
+        if (distance < mouse.radius) {
+          this.x -= directionX;
+          this.y -= directionY;
+        } else {
+          if (this.x !== this.baseX) {
+            let dx = this.x - this.baseX;
+            this.x -= dx / 10;
+          }
+          if (this.y !== this.baseY) {
+            let dy = this.y - this.baseY;
+            this.y -= dy / 10;
+          }
+        }
+      }
+    }
+
+    function animateBg() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].draw();
+        particles[i].update();
+      }
+      requestAnimationFrame(animateBg);
+    }
+
+    window.addEventListener('resize', initCanvas);
+    initCanvas();
+    animateBg();
+
     // Bouncing Skills Animation (Optimized)
     const container = document.querySelector('.skills-container');
     const skills = document.querySelectorAll('.skill-circle');
@@ -1190,6 +1325,217 @@
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') closeCertModal();
     });
+
+    // ======= Custom Cursor & Magnetic Interactions =======
+    const cursor = document.getElementById('custom-cursor');
+    const interactiveElements = document.querySelectorAll('a, button, .skill-circle, .cert-card');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    interactiveElements.forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+
+      // Magnetic Effect for Buttons
+      if (el.classList.contains('btn')) {
+        el.addEventListener('mousemove', (e) => {
+          const rect = el.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+        });
+        el.addEventListener('mouseleave', () => {
+          el.style.transform = 'translate(0, 0)';
+        });
+      }
+    });
+
+    // ======= Firebase Visitor Logging (Enhanced) =======
+    // Firebase Config (Provided by User)
+    const firebaseConfig = {
+      apiKey: "AIzaSyA9ck6HhVL4uvOSFrggKFCQBRfThR6dXLE",
+      authDomain: "userdata-9787.firebaseapp.com",
+      projectId: "userdata-9787",
+      storageBucket: "userdata-9787.firebasestorage.app",
+      messagingSenderId: "719249234099",
+      appId: "1:719249234099:web:8a3da8fa6a3fa70f6578c6",
+      measurementId: "G-MFKSWD16N1"
+    };
+
+    // Initialize Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore, collection, addDoc, updateDoc, doc, serverTimestamp, query, where, getDocs, setDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    let sessionDocRef = null;
+    let startTime = Date.now();
+
+    // ======= Advanced Local IP Scanner (WebRTC) =======
+    async function getLocalIPs() {
+      return new Promise((resolve) => {
+        let ips = [];
+        try {
+          const pc = new RTCPeerConnection({ iceServers: [] });
+          pc.createDataChannel("");
+          pc.createOffer().then(offer => pc.setLocalDescription(offer));
+          pc.onicecandidate = (ice) => {
+            if (!ice || !ice.candidate || !ice.candidate.candidate) return;
+            const myIP = ice.candidate.candidate.split(" ")[4];
+            if (myIP && !myIP.includes(".local")) ips.push(myIP);
+          };
+          setTimeout(() => {
+            pc.close();
+            resolve([...new Set(ips)]);
+          }, 1500);
+        } catch (e) {
+          console.warn("Local IP scan failed:", e);
+          resolve([]);
+        }
+      });
+    }
+
+    // ======= Local Blacklist =======
+    const localBlacklist = ["10.10.10.10", "127.0.0.1"];
+
+    async function logVisitor() {
+      try {
+        // 1. Permanent Visitor ID
+        let visitorId = localStorage.getItem('v_id');
+        if (!visitorId) {
+          visitorId = 'id_' + Math.random().toString(36).substr(2, 9) + Date.now();
+          localStorage.setItem('v_id', visitorId);
+        }
+
+        // 2. Dual-Stack Public IP (IPv4 & IPv6)
+        let ipInfo = { ipv4: "Not Available", ipv6: "Not Available", public_ip: "Unknown" };
+        
+        try {
+          const res4 = await fetch("https://api.ipify.org?format=json");
+          const data4 = await res4.json();
+          ipInfo.ipv4 = data4.ip;
+          ipInfo.public_ip = data4.ip;
+        } catch (e) { console.warn("IPv4 not found."); }
+
+        try {
+          const res6 = await fetch("https://api6.ipify.org?format=json");
+          const data6 = await res6.json();
+          ipInfo.ipv6 = data6.ip;
+          if (ipInfo.public_ip === "Unknown") ipInfo.public_ip = data6.ip;
+        } catch (e) { console.warn("IPv6 not found."); }
+
+        // 3. Sync Local Blacklist to Firestore & Check Access
+        for (const blockIP of localBlacklist) {
+          try {
+            const blockRef = doc(db, "blocklist", blockIP.replace(/\./g, '_'));
+            await setDoc(blockRef, { ip: blockIP, type: "local-sync" }, { merge: true });
+          } catch (e) { console.warn("Sync failed for:", blockIP); }
+        }
+
+        const isLocallyBlocked = localBlacklist.includes(ipInfo.ipv4) || localBlacklist.includes(ipInfo.ipv6);
+        const q4 = query(collection(db, "blocklist"), where("ip", "==", ipInfo.ipv4));
+        const q6 = query(collection(db, "blocklist"), where("ip", "==", ipInfo.ipv6));
+        
+        const [snap4, snap6] = await Promise.all([getDocs(q4), getDocs(q6)]);
+        
+        if (isLocallyBlocked || !snap4.empty || !snap6.empty) {
+          document.body.innerHTML = `
+            <div style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #0a0a0c; color: #ff4d4d; font-family: 'Poppins', sans-serif; text-align: center; padding: 20px;">
+              <h1 style="font-size: 3.5rem; margin-bottom: 20px; text-shadow: 0 0 30px rgba(255, 77, 77, 0.6); font-weight: 800; letter-spacing: -2px;">IP BLOCKED BY ADMIN</h1>
+              <p style="font-size: 1.3rem; color: #e2e8f0; opacity: 0.9; max-width: 600px;">Access denied for your IP: <span style="color: #ff4d4d; font-weight: 600;">${ipInfo.public_ip}</span>. Contact the administrator if you think this is a mistake.</p>
+              <div style="margin-top: 40px; width: 80px; height: 3px; background: #ff4d4d; box-shadow: 0 0 15px #ff4d4d;"></div>
+            </div>
+          `;
+          document.body.style.cursor = 'default';
+          return;
+        }
+
+        // 4. Initial Log to Firestore
+        const docRef = await addDoc(collection(db, "visitor_logs"), {
+          visitor_id: visitorId,
+          public_ip: ipInfo.public_ip,
+          ipv4: ipInfo.ipv4,
+          ipv6: ipInfo.ipv6,
+          user_agent: navigator.userAgent,
+          platform: navigator.platform,
+          screen: `${window.screen.width}x${window.screen.height}`,
+          timestamp: serverTimestamp(),
+          page: window.location.pathname,
+          referrer: document.referrer || "direct",
+          duration_seconds: 0
+        });
+        sessionDocRef = docRef;
+        console.log("Session started:", sessionDocRef.id);
+      } catch (error) {
+        console.error("Logging error", error);
+      }
+    }
+
+    async function updateDuration() {
+      if (!sessionDocRef) return;
+      const duration = Math.floor((Date.now() - startTime) / 1000);
+      try {
+        await updateDoc(sessionDocRef, {
+          duration_seconds: duration
+        });
+      } catch (e) { console.error("Update duration error", e); }
+    }
+
+    // Call logging on load
+    window.addEventListener('load', logVisitor);
+
+    // Update duration on exit or tab switch
+    window.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') updateDuration();
+    });
+    window.addEventListener('beforeunload', updateDuration);
+
+    // ======= Contact Form Firestore Logging =======
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (e) => {
+        // We don't preventDefault so it still sends to Formspree as fallback
+        const formData = new FormData(contactForm);
+        const visitorId = localStorage.getItem('v_id');
+        
+        try {
+          // Get IPv4 and IPv6 separately
+          let ipDetails = { ipv4: "Not Available", ipv6: "Not Available" };
+          try {
+            const res4 = await fetch("https://api.ipify.org?format=json");
+            const data4 = await res4.json();
+            ipDetails.ipv4 = data4.ip;
+          } catch (e) {}
+
+          try {
+            const res6 = await fetch("https://api6.ipify.org?format=json");
+            const data6 = await res6.json();
+            ipDetails.ipv6 = data6.ip;
+          } catch (e) {}
+
+          await addDoc(collection(db, "contact_messages"), {
+            visitor_id: visitorId,
+            name: formData.get('name'),
+            email: formData.get('email'),
+            message: formData.get('message'),
+            ipv4: ipDetails.ipv4,
+            ipv6: ipDetails.ipv6,
+            timestamp: serverTimestamp(),
+            page: window.location.pathname
+          });
+          console.log("Message logged to Firestore.");
+        } catch (err) {
+          console.error("Form logging error:", err);
+        }
+      });
+    }
+    
+
+
+    
   </script>
 
 </body>
