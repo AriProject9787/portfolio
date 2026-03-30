@@ -870,7 +870,7 @@
 
   <!-- Header -->
   <header data-aos="fade-down">
-    <img src="res/hari.jpeg" alt="Profile Picture of Arirama Selvam M">
+    <img src="res/arirama_selvam.jpeg" alt="Profile Picture of Arirama Selvam M">
     <h1>Arirama Selvam M</h1>
     <p>Computer Science Engineer | Freelancer | Futuristic Web & Software Developer</p>
     <p class="tagline">Let’s build something futuristic together!</p>
@@ -1354,16 +1354,8 @@
     });
 
     // ======= Firebase Visitor Logging (Enhanced) =======
-    // Firebase Config (Provided by User)
-    const firebaseConfig = {
-      apiKey: "AIzaSyA9ck6HhVL4uvOSFrggKFCQBRfThR6dXLE",
-      authDomain: "userdata-9787.firebaseapp.com",
-      projectId: "userdata-9787",
-      storageBucket: "userdata-9787.firebasestorage.app",
-      messagingSenderId: "719249234099",
-      appId: "1:719249234099:web:8a3da8fa6a3fa70f6578c6",
-      measurementId: "G-MFKSWD16N1"
-    };
+    // Firebase Config migrated to separate file
+    import firebaseConfig from './js/firebase-config.js';
 
     // Initialize Firebase
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
