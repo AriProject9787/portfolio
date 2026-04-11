@@ -13,14 +13,14 @@
   <meta property="og:title" content="Arirama Selvam M - Developer & Automation Expert">
   <meta property="og:description"
     content="Offering SaaS Billing Systems, Inventory Automation, and Cybersecurity Solutions.">
-  <meta property="og:image" content="images/profile.jpg">
+  <meta property="og:image" content="res/arirama_selvam.jpeg">
   <meta property="og:url" content="https://ariproject9787.github.io/portfolio/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Arirama Selvam M - Developer & Automation Expert">
   <meta name="twitter:description"
     content="Explore my portfolio: SaaS Billing, Automation, and Cybersecurity Solutions.">
-  <meta name="twitter:image" content="images/profile.jpg">
+  <meta name="twitter:image" content="res/arirama_selvam.jpeg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
@@ -906,35 +906,58 @@
     <h2>Skills</h2>
     <div class="skills-container">
       <div class="skill-circle"><i class="devicon-firebase-plain"></i><span>Firebase</span></div>
-      <div class="skill-circle"><i class="devicon-cplusplus-plain"></i><span>C++</span></div>
+      <div class="skill-circle"><i class="devicon-linux-plain"></i><span>Linux Administrator</span></div>
       <div class="skill-circle"><i class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
       <div class="skill-circle"><i class="devicon-php-plain"></i><span>PHP</span></div>
       <div class="skill-circle"><i class="devicon-css3-plain"></i><span>CSS</span></div>
       <div class="skill-circle"><i class="devicon-java-plain"></i><span>Java</span></div>
       <div class="skill-circle"><i class="devicon-html5-plain"></i><span>HTML</span></div>
       <div class="skill-circle"><i class="devicon-python-plain"></i><span>Python</span></div>
-      <div class="skill-circle"><i class="devicon-c-plain"></i><span>C</span></div>
+      <div class="skill-circle"><i class="devicon-ssh-plain"></i><span>CCNA</span></div>
       <div class="skill-circle"><i class="devicon-react-original"></i><span>React</span></div>
       <div class="skill-circle"><i class="devicon-git-plain"></i><span>Git</span></div>
+      <div class="skill-circle"><i class="devicon-tensorflow-original"></i><span>TensorFlow</span></div>
+      <div class="skill-circle"><i class="devicon-python-plain"></i><span>Streamlit</span></div>
+      <div class="skill-circle"><i class="devicon-opencv-plain"></i><span>OpenCV</span></div>
       <div class="skill-circle"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
+      <div class="skill-circle"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
     </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="grid">
+      
+
+      <div class="card" data-title="AI Polyp Detector & Analysis Portal"
+        data-desc="Next-generation medical AI tool for detecting and segmenting colorectal polyps using Deep Learning (Classification + U-Net). Includes clinical preprocessing for glare removal and automated reporting.">
+        <a href="https://ai-polyp-detector-ariramaselvam.streamlit.app/" style="text-decoration: none;">
+          <h3 style="color: #e0e0e0;">AI Polyp Detector & Analysis Portal 🔬</h3>
+          <p>Deep Learning system for real-time gastrointestinal tissue analysis and segmentation.</p>
+        </a>
+      </div>
+
+      <div class="card" data-title="Birthday Reminder & Celebration Generator"
+        data-desc="A premium, all-in-one platform to manage birthdays, get reminders, and generate stunning personalized celebration pages. Features real-time age calculation, countdowns, privacy controls, and a custom Wish Factory for personalized memories.">
+        <a href="https://ariproject9787.github.io/projects/festvials-main/wish/" style="text-decoration: none;">
+          <h3 style="color: #e0e0e0;">Birthday Reminder & Celebration Generator 🎂</h3>
+          <p>Premium platform for birthday management and personalized celebration generation.</p>
+        </a>
+      </div>
+
       <div class="card" data-title="Document Verification System"
         data-desc="AI-powered document verification system using Python and Streamlit for authenticating marksheets and IDs.">
         <a href="https://ari-document-verfication.streamlit.app/" style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">Document Verification System</h3>
           <p>AI-powered document verification system using Python and Streamlit.</p>
+        </a>
       </div>
       <div class="card" data-title="Online Food Ordering & Billing System"
         data-desc="A full-stack e-commerce food platform with real-time Firebase backend, admin panel, billing, and smart AI features.">
         <a href="https://github.com/AriProject9787/inventory/blob/main/README.md" style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">Online Food Ordering & Billing System</h3>
+          <p>Real-time food ordering, billing, and admin panel with Firebase integration.</p>
         </a>
-        <p>Real-time food ordering, billing, and admin panel with Firebase integration.</p>
       </div>
 
       <div class="card" data-title="Voice Assistant App"
@@ -1153,10 +1176,43 @@
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/AriProject9787/MasterControl@main/script/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/AriProject9787/MasterControl@main/script/encScript.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/AriProject9787/MasterControl@main/script/script.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/gh/AriProject9787/MasterControl@main/script/encScript.js"></script> -->
 
   <script type="module">
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // ======= Drawer Toggle =======
+    const menuBtn = document.getElementById('menu-btn');
+    const drawer = document.getElementById('drawer');
+    const drawerLinks = document.querySelectorAll('.drawer a');
+
+    if (menuBtn && drawer) {
+      menuBtn.addEventListener('click', () => {
+        drawer.classList.toggle('open');
+      });
+
+      drawerLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          drawer.classList.remove('open');
+        });
+      });
+    }
+
+    // ======= Light Mode Toggle =======
+    const modeToggle = document.getElementById('mode-toggle');
+    if (modeToggle) {
+      modeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        const isLight = document.body.classList.contains('light-mode');
+        modeToggle.textContent = isLight ? 'Dark Mode' : 'Light Mode';
+      });
+    }
+
     // ======= Interactive Particle Background =======
     const canvas = document.getElementById('bg');
     const ctx = canvas.getContext('2d');
