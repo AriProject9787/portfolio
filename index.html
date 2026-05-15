@@ -8,7 +8,7 @@
   <meta name="description"
     content="Portfolio of Arirama Selvam M: SaaS Billing, Inventory Automation & Cybersecurity Developer. Explore services, projects & contact info.">
   <meta name="keywords"
-    content="Arirama Selvam, SaaS Billing Developer, Automation Scripts, Inventory Management, Cybersecurity, Portfolio, Freelance Developer India">
+    content="Arirama Selvam M, Arirama Selvam,arirama selvam , SaaS Billing Developer, Automation Scripts, Inventory Management, Cybersecurity, Portfolio, Freelance Developer India, Computer Science Engineer">
   <meta name="author" content="Arirama Selvam M">
   <meta property="og:title" content="Arirama Selvam M - Developer & Automation Expert">
   <meta property="og:description"
@@ -24,6 +24,29 @@
   <link rel="canonical" href="https://ariproject9787.github.io/portfolio/">
   <link rel="icon" type="image/jpeg" href="res/arirama_selvam.jpeg">
   <meta name="robots" content="index, follow">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Arirama Selvam M",
+      "url": "https://ariproject9787.github.io/portfolio/",
+      "sameAs": [
+        "https://github.com/AriProject9787",
+        "https://linkedin.com/in/ariramaselvam",
+        "https://instagram.com/hack_tech_tamil",
+        "https://instagram.com/arirama_selvam",
+        "https://in.pinterest.com/ariramaselvam/arirama-selvam-m/"
+      ],
+      "jobTitle": "Developer & Automation Expert",
+      "description": "Portfolio of Arirama Selvam M: SaaS Billing, Inventory Automation & Cybersecurity Developer.",
+      "image": "https://ariproject9787.github.io/portfolio/res/arirama_selvam.jpeg",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Dr. G.U. Pope College of Engineering"
+      },
+      "knowsAbout": ["SaaS Billing", "Inventory Automation", "Cybersecurity", "Python", "Full-Stack Development"]
+    }
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
@@ -58,7 +81,8 @@
       line-height: 1.6;
       position: relative;
       transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s;
-      cursor: none; /* Hide default cursor */
+      cursor: none;
+      /* Hide default cursor */
     }
 
     /* Custom Cursor */
@@ -90,6 +114,7 @@
       .custom-cursor {
         display: none;
       }
+
       body {
         cursor: auto;
       }
@@ -579,8 +604,15 @@
 
     /* Floating Base Animation */
     @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(0); }
-      50% { transform: translateY(-10px) rotate(2deg); }
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0);
+      }
+
+      50% {
+        transform: translateY(-10px) rotate(2deg);
+      }
     }
 
     /* Removed CSS Animations for JS control */
@@ -827,20 +859,6 @@
     gtag('config', 'G-S2PVB77BT8');
   </script>
 
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Arirama Selvam M",
-  "jobTitle": "SaaS Billing & Cybersecurity Developer",
-  "url": "https://ariproject9787.github.io/portfolio/",
-  "sameAs": [
-    "https://linkedin.com/in/ariramaselvam",
-    "https://instagram.com/hack_tech_tamil",
-    "https://github.com/AriProject9787"
-  ]
-}
-</script>
 
 </head>
 
@@ -849,10 +867,10 @@
   <canvas id="bg"></canvas>
 
   <!-- Mode Toggle -->
-  <button class="mode-toggle" id="mode-toggle">Light Mode</button>
+  <button class="mode-toggle" id="mode-toggle" aria-label="Toggle Dark and Light Mode">Light Mode</button>
 
   <!-- Menu Button -->
-  <div class="menu-btn" id="menu-btn">
+  <div class="menu-btn" id="menu-btn" role="button" aria-label="Open Navigation Menu" aria-expanded="false">
     <div></div>
     <div></div>
     <div></div>
@@ -931,11 +949,12 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="grid">
-      
+
 
       <div class="card" data-title="AI Polyp Detector & Analysis Portal"
         data-desc="Next-generation medical AI tool for detecting and segmenting colorectal polyps using Deep Learning (Classification + U-Net). Includes clinical preprocessing for glare removal and automated reporting.">
-        <a href="https://ai-polyp-detector-ariramaselvam.streamlit.app/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+        <a href="https://ai-polyp-detector-ariramaselvam.streamlit.app/" target="_blank" rel="noopener noreferrer"
+          style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">AI Polyp Detector & Analysis Portal 🔬</h3>
           <p>Deep Learning system for real-time gastrointestinal tissue analysis and segmentation.</p>
         </a>
@@ -943,7 +962,8 @@
 
       <div class="card" data-title="Birthday Reminder & Celebration Generator"
         data-desc="A premium, all-in-one platform to manage birthdays, get reminders, and generate stunning personalized celebration pages. Features real-time age calculation, countdowns, privacy controls, and a custom Wish Factory for personalized memories.">
-        <a href="https://ariproject9787.github.io/projects/festvials-main/wish/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+        <a href="https://ariproject9787.github.io/projects/festvials-main/wish/" target="_blank"
+          rel="noopener noreferrer" style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">Birthday Reminder & Celebration Generator 🎂</h3>
           <p>Premium platform for birthday management and personalized celebration generation.</p>
         </a>
@@ -951,14 +971,16 @@
 
       <div class="card" data-title="Document Verification System"
         data-desc="AI-powered document verification system using Python and Streamlit for authenticating marksheets and IDs.">
-        <a href="https://ari-document-verfication.streamlit.app/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+        <a href="https://ari-document-verfication.streamlit.app/" target="_blank" rel="noopener noreferrer"
+          style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">Document Verification System</h3>
           <p>AI-powered document verification system using Python and Streamlit.</p>
         </a>
       </div>
       <div class="card" data-title="Online Food Ordering & Billing System"
         data-desc="A full-stack e-commerce food platform with real-time Firebase backend, admin panel, billing, and smart AI features.">
-        <a href="https://github.com/AriProject9787/inventory/blob/main/README.md" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+        <a href="https://github.com/AriProject9787/inventory/blob/main/README.md" target="_blank"
+          rel="noopener noreferrer" style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">Online Food Ordering & Billing System</h3>
           <p>Real-time food ordering, billing, and admin panel with Firebase integration.</p>
         </a>
@@ -966,8 +988,8 @@
 
       <div class="card" data-title="Voice Assistant App"
         data-desc="Android assistant using Picovoice SDK for wake-word detection, commands, and smart reminders.">
-        <a href="https://github.com/AriProject9787/linuxAutomationCheck/blob/main/README.md"
-          target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+        <a href="https://github.com/AriProject9787/linuxAutomationCheck/blob/main/README.md" target="_blank"
+          rel="noopener noreferrer" style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">Voice Assistant App</h3>
           <p>Hands-free voice-controlled assistant.</p>
         </a>
@@ -995,12 +1017,13 @@
       <h3>🖥️ Programming &amp; Web Development</h3>
       <div class="cert-scroll">
         <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/html-cert.png">
-          <img src="res/certificates/AriCertificate--main/eduprep/html-cert.png" alt="HTML Certificate" loading="lazy">
+          <img src="res/certificates/AriCertificate--main/eduprep/html-cert.png"
+            alt="HTML Certificate - Arirama Selvam M" loading="lazy">
           <div class="cert-label">HTML</div>
         </div>
         <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/JavaScript-cert.png">
-          <img src="res/certificates/AriCertificate--main/eduprep/JavaScript-cert.png" alt="JavaScript Certificate"
-            loading="lazy">
+          <img src="res/certificates/AriCertificate--main/eduprep/JavaScript-cert.png"
+            alt="JavaScript Certificate - Arirama Selvam M" loading="lazy">
           <div class="cert-label">JavaScript</div>
         </div>
         <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/php-cert.png">
@@ -1008,13 +1031,13 @@
           <div class="cert-label">PHP</div>
         </div>
         <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/mysql-cert.png">
-          <img src="res/certificates/AriCertificate--main/eduprep/mysql-cert.png" alt="MySQL Certificate"
-            loading="lazy">
+          <img src="res/certificates/AriCertificate--main/eduprep/mysql-cert.png"
+            alt="MySQL Certificate - Arirama Selvam M" loading="lazy">
           <div class="cert-label">MySQL</div>
         </div>
         <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/python-cert.png">
-          <img src="res/certificates/AriCertificate--main/eduprep/python-cert.png" alt="Python Certificate"
-            loading="lazy">
+          <img src="res/certificates/AriCertificate--main/eduprep/python-cert.png"
+            alt="Python Certificate - Arirama Selvam M" loading="lazy">
           <div class="cert-label">Python</div>
         </div>
         <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/java-cert.png">
@@ -1044,12 +1067,12 @@
       <div class="cert-scroll">
         <div class="cert-card" data-src="res/certificates/AriCertificate--main/novitech/novitech_cyber_security-1.png">
           <img src="res/certificates/AriCertificate--main/novitech/novitech_cyber_security-1.png"
-            alt="Novitech Cybersecurity" loading="lazy">
+            alt="Novitech Cybersecurity Certificate - Arirama Selvam M" loading="lazy">
           <div class="cert-label">Cybersecurity – Novitech</div>
         </div>
         <div class="cert-card" data-src="res/certificates/AriCertificate--main/corizo/arirama_selvam_cyber-1.png">
           <img src="res/certificates/AriCertificate--main/corizo/arirama_selvam_cyber-1.png"
-            alt="Cybersecurity – Corizo" loading="lazy">
+            alt="Cybersecurity Certificate Corizo - Arirama Selvam M" loading="lazy">
           <div class="cert-label">Cybersecurity – Corizo</div>
         </div>
       </div>
@@ -1060,13 +1083,13 @@
       <h3>🤖 AI &amp; Machine Learning</h3>
       <div class="cert-scroll">
         <div class="cert-card" data-src="res/certificates/AriCertificate--main/pantech/ai_internship-1.png">
-          <img src="res/certificates/AriCertificate--main/pantech/ai_internship-1.png" alt="AI Internship – Pantech"
-            loading="lazy">
+          <img src="res/certificates/AriCertificate--main/pantech/ai_internship-1.png"
+            alt="AI Internship Certificate Pantech - Arirama Selvam M" loading="lazy">
           <div class="cert-label">AI Internship – Pantech</div>
         </div>
         <div class="cert-card" data-src="res/certificates/AriCertificate--main/pantech/Ml_Internship_Certificate-1.png">
           <img src="res/certificates/AriCertificate--main/pantech/Ml_Internship_Certificate-1.png"
-            alt="ML Internship – Pantech" loading="lazy">
+            alt="ML Internship Certificate Pantech - Arirama Selvam M" loading="lazy">
           <div class="cert-label">ML Internship – Pantech</div>
         </div>
         <div class="cert-card" data-src="res/certificates/AriCertificate--main/pantech/python_cert-1.png">
@@ -1145,22 +1168,30 @@
       </form>
       <div style="text-align:center;margin-top:20px;">
         <p>Email: <a href="mailto:ariofficial9787@gmail.com" style="color:#00f7ff;">ariofficial9787@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/AriProject9787" target="_blank" rel="noopener noreferrer" style="color:#00f7ff;">github.com/AriProject9787</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/ariramaselvam" target="_blank" rel="noopener noreferrer"
+        <p>GitHub: <a href="https://github.com/AriProject9787" target="_blank" rel="me noopener noreferrer"
+            style="color:#00f7ff;">github.com/AriProject9787</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/ariramaselvam" target="_blank" rel="me noopener noreferrer"
             style="color:#00f7ff;">linkedin.com/in/ariramaselvam</a></p>
-        <p>Instagram: <a href="https://instagram.com/hack_tech_tamil" target="_blank" rel="noopener noreferrer"
+        <p>Instagram: <a href="https://instagram.com/hack_tech_tamil" target="_blank" rel="me noopener noreferrer"
             style="color:#00f7ff;">@hack_tech_tamil</a></p>
+
       </div>
     </div>
   </section>
 
   <section id="analytics" style="padding-top: 0;">
-    <div style="background:#111; padding:20px; border-radius:15px; border: 1px solid rgba(0, 247, 255, 0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-      <h3 style="text-align: center; color: #00f7ff; margin-bottom: 20px; font-size: 1.1rem; opacity: 0.8;">Live Visitor Analytics</h3>
-      <div id="analytics-container" style="position:relative; width:100%; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center;">
+    <div
+      style="background:#111; padding:20px; border-radius:15px; border: 1px solid rgba(0, 247, 255, 0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+      <h3 style="text-align: center; color: #00f7ff; margin-bottom: 20px; font-size: 1.1rem; opacity: 0.8;">Live Visitor
+        Analytics</h3>
+      <div id="analytics-container"
+        style="position:relative; width:100%; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center;">
         <!-- Placeholder while loading -->
-        <div id="analytics-placeholder" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #00f7ff; font-weight: 600;">
-          <div class="loader-spinner" style="width: 40px; height: 40px; border: 3px solid rgba(0,247,255,0.1); border-top-color: #00f7ff; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 15px;"></div>
+        <div id="analytics-placeholder"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #00f7ff; font-weight: 600;">
+          <div class="loader-spinner"
+            style="width: 40px; height: 40px; border: 3px solid rgba(0,247,255,0.1); border-top-color: #00f7ff; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 15px;">
+          </div>
           <span>Loading Real-time Analytics...</span>
         </div>
       </div>
@@ -1168,14 +1199,18 @@
   </section>
 
   <style>
-    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
   </style>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const container = document.getElementById('analytics-container');
       const placeholder = document.getElementById('analytics-placeholder');
-      
+
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -1191,7 +1226,7 @@
             iframe.style.borderRadius = "12px";
             iframe.style.filter = "invert(1) hue-rotate(180deg)";
             iframe.allowFullscreen = true;
-            
+
             iframe.onload = () => {
               placeholder.style.display = 'none';
             };
@@ -1503,7 +1538,7 @@
 
         // 2. Dual-Stack Public IP (IPv4 & IPv6)
         let ipInfo = { ipv4: "Not Available", ipv6: "Not Available", public_ip: "Unknown" };
-        
+
         try {
           const res4 = await fetch("https://api.ipify.org?format=json");
           const data4 = await res4.json();
@@ -1529,9 +1564,9 @@
         const isLocallyBlocked = localBlacklist.includes(ipInfo.ipv4) || localBlacklist.includes(ipInfo.ipv6);
         const q4 = query(collection(db, "blocklist"), where("ip", "==", ipInfo.ipv4));
         const q6 = query(collection(db, "blocklist"), where("ip", "==", ipInfo.ipv6));
-        
+
         const [snap4, snap6] = await Promise.all([getDocs(q4), getDocs(q6)]);
-        
+
         if (isLocallyBlocked || !snap4.empty || !snap6.empty) {
           document.body.innerHTML = `
             <div style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #0a0a0c; color: #ff4d4d; font-family: 'Poppins', sans-serif; text-align: center; padding: 20px;">
@@ -1591,7 +1626,7 @@
         // We don't preventDefault so it still sends to Formspree as fallback
         const formData = new FormData(contactForm);
         const visitorId = localStorage.getItem('v_id');
-        
+
         try {
           // Get IPv4 and IPv6 separately
           let ipDetails = { ipv4: "Not Available", ipv6: "Not Available" };
@@ -1599,13 +1634,13 @@
             const res4 = await fetch("https://api.ipify.org?format=json");
             const data4 = await res4.json();
             ipDetails.ipv4 = data4.ip;
-          } catch (e) {}
+          } catch (e) { }
 
           try {
             const res6 = await fetch("https://api6.ipify.org?format=json");
             const data6 = await res6.json();
             ipDetails.ipv6 = data6.ip;
-          } catch (e) {}
+          } catch (e) { }
 
           await addDoc(collection(db, "contact_messages"), {
             visitor_id: visitorId,
@@ -1623,10 +1658,10 @@
         }
       });
     }
-    
 
 
-    
+
+
   </script>
 
 </body>
