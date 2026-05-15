@@ -6,12 +6,17 @@
   <meta name="description" content="Futuristic Web Development & Billing Software by Arirama Selvam M">
   <title>Futuristic Web & Billing Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <style>
     * {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
     html {scroll-behavior:smooth;}
     body {background:#0d0d0d;color:#e0e0e0;line-height:1.6;overflow-x:hidden;}
 
     canvas#bg {position:fixed;top:0;left:0;z-index:-1;}
+    
+    .service-icon { font-size: 2.5rem; color: #00f7ff; margin-bottom: 20px; text-shadow: 0 0 10px rgba(0, 247, 255, 0.5); }
+    .card h3 { margin-bottom: 15px; }
 
     header {text-align:center;padding:100px 20px;}
     header h1 {font-size:2.8rem;color:#00f7ff;text-shadow:0 0 15px #00f7ff;animation:fadeIn 2s ease-in-out;}
@@ -31,11 +36,52 @@
     .card {background:rgba(255,255,255,0.05);padding:20px;border-radius:15px;backdrop-filter:blur(10px);transition:0.3s;border:1px solid rgba(0,247,255,0.2);}
     .card:hover {transform:translateY(-10px);border-color:#00f7ff;box-shadow:0 0 15px #00f7ff;}
 
-    /* Pricing Cards */
-    .pricing-card {text-align:center;transition:transform 0.3s ease;}
-    .pricing-card:hover {transform:scale(1.05);}
-    .pricing-card h3 {margin-bottom:10px;color:#00f7ff;}
-    .pricing-card p {margin:10px 0;}
+    .pricing-card {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 480px;
+      justify-content: space-between;
+      position: relative;
+    }
+    .pricing-card.featured {
+      border-color: #00f7ff;
+      box-shadow: 0 0 30px rgba(0, 247, 255, 0.4);
+      transform: scale(1.05);
+      background: rgba(0, 247, 255, 0.05);
+    }
+    .popular-tag {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #00f7ff;
+      color: #0d0d0d;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .pricing-header h3 { font-size: 1.8rem; margin-bottom: 5px; color: #00f7ff; }
+    .plan-subtitle { color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px; }
+    .price { font-size: 2.2rem; font-weight: 700; color: #fff; margin-bottom: 25px; }
+    .price span { font-size: 1rem; color: #94a3b8; font-weight: 400; }
+    
+    .features { list-style: none; padding: 0; margin-bottom: 30px; text-align: left; }
+    .features li { margin-bottom: 12px; font-size: 0.95rem; color: #cbd5e1; display: flex; align-items: center; }
+    .features li::before { content: "✓"; color: #00f7ff; margin-right: 10px; font-weight: bold; }
+    
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #00f7ff;
+      color: #00f7ff;
+    }
+    .btn-outline:hover {
+      background: #00f7ff;
+      color: #0d0d0d;
+    }
 
     /* Testimonials Slider */
     .testimonials {max-width:700px;margin:auto;position:relative;overflow:hidden;}
@@ -61,21 +107,85 @@
 </header>
 
 <section id="services">
-  <h2>Our Services</h2>
+  <h2>Our Professional Services</h2>
   <div class="grid">
-    <div class="card"><h3>Custom Website Development</h3><p>Responsive, SEO-ready, and futuristic designs.</p></div>
-    <div class="card"><h3>Billing Software</h3><p>POS with analytics, QR receipts, and inventory sync.</p></div>
-    <div class="card"><h3>Automation Solutions</h3><p>AI-driven tools to automate and optimize operations.</p></div>
-    <div class="card"><h3>Support & Maintenance</h3><p>Reliable updates, monitoring, and 24/7 assistance.</p></div>
+    <div class="card" data-aos="fade-up">
+      <div class="service-icon"><i class="fas fa-code"></i></div>
+      <h3>Custom Website Development</h3>
+      <p>Responsive, SEO-ready, and futuristic designs tailored to your brand identity.</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <div class="service-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+      <h3>Billing Software</h3>
+      <p>Advanced POS systems with real-time analytics, QR receipts, and inventory synchronization.</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <div class="service-icon"><i class="fas fa-robot"></i></div>
+      <h3>Automation Solutions</h3>
+      <p>AI-driven tools and custom scripts to automate repetitive tasks and optimize operations.</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <div class="service-icon"><i class="fas fa-headset"></i></div>
+      <h3>Support & Maintenance</h3>
+      <p>Reliable updates, security monitoring, and 24/7 dedicated assistance for your systems.</p>
+    </div>
   </div>
 </section>
 
 <section id="pricing">
-  <h2>Pricing Plans</h2>
+  <h2>Professional Pricing Plans</h2>
   <div class="grid">
-    <div class="card pricing-card"><h3>Starter</h3><p>For small businesses</p><p><b>₹2,999</b></p></div>
-    <div class="card pricing-card"><h3>Professional</h3><p>For growing teams</p><p><b>₹10,000</b></p></div>
-    <div class="card pricing-card"><h3>Enterprise</h3><p>Custom solutions</p><p><b>Contact Us</b></p></div>
+    <!-- Starter Plan -->
+    <div class="card pricing-card" data-aos="fade-up">
+      <div class="pricing-header">
+        <h3>Starter</h3>
+        <p class="plan-subtitle">Ideal for Individuals</p>
+        <div class="price">₹2,999<span>/project</span></div>
+      </div>
+      <ul class="features">
+        <li>One-Page Modern Website</li>
+        <li>Basic SEO Setup</li>
+        <li>Mobile Responsive Design</li>
+        <li>Contact Form Integration</li>
+        <li>1 Month Tech Support</li>
+      </ul>
+      <a href="#contact" class="btn btn-outline">Choose Starter</a>
+    </div>
+
+    <!-- Professional Plan (Featured) -->
+    <div class="card pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+      <div class="popular-tag">MOST POPULAR</div>
+      <div class="pricing-header">
+        <h3>Professional</h3>
+        <p class="plan-subtitle">For Growing Businesses</p>
+        <div class="price">₹10,000<span>/project</span></div>
+      </div>
+      <ul class="features">
+        <li>Multi-Page (Up to 5) Site</li>
+        <li>Advanced SEO Optimization</li>
+        <li>Custom Google Analytics</li>
+        <li>Domain & Hosting (1 Year)</li>
+        <li>6 Months Priority Support</li>
+      </ul>
+      <a href="#contact" class="btn">Go Professional</a>
+    </div>
+
+    <!-- Enterprise Plan -->
+    <div class="card pricing-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="pricing-header">
+        <h3>Enterprise</h3>
+        <p class="plan-subtitle">Custom Architecture</p>
+        <div class="price">Custom<span>/quote</span></div>
+      </div>
+      <ul class="features">
+        <li>Full Billing & POS Software</li>
+        <li>Complex Automation Scripts</li>
+        <li>Dedicated Database Integration</li>
+        <li>Cloud Infrastructure Setup</li>
+        <li>Lifetime Maintenance</li>
+      </ul>
+      <a href="#contact" class="btn btn-outline">Contact for Quote</a>
+    </div>
   </div>
 </section>
 
@@ -158,5 +268,9 @@
 
  </script>
 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
 </body>
 </html>
