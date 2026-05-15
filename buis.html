@@ -83,12 +83,6 @@
       color: #0d0d0d;
     }
 
-    /* Testimonials Slider */
-    .testimonials {max-width:700px;margin:auto;position:relative;overflow:hidden;}
-    .testimonial {display:none;text-align:center;font-style:italic;}
-    .testimonial.active {display:block;}
-    .testimonial h4 {margin-top:10px;color:#00f7ff;}
-
     footer {text-align:center;padding:20px;background:#111;color:#777;}
 
     /* WhatsApp Floating Button */
@@ -189,23 +183,7 @@
   </div>
 </section>
 
-<section id="testimonials">
-  <h2>Client Testimonials</h2>
-  <div class="testimonials">
-    <div class="testimonial active">
-      <p>"The billing software transformed our business operations. Super easy to use!"</p>
-      <h4>- TechMart CEO</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Best web development team we’ve worked with. Professional and futuristic!"</p>
-      <h4>- Startup Hub</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Excellent support and automation tools. Highly recommended!"</p>
-      <h4>- Bright Solutions</h4>
-    </div>
-  </div>
-</section>
+
 
 <section id="contact">
   <h2>Contact Us</h2>
@@ -257,14 +235,7 @@
     canvas.height = innerHeight;
   });
 
-  // Testimonials Slider
-  let index = 0;
-  const testimonials = document.querySelectorAll('.testimonial');
-  setInterval(() => {
-    testimonials[index].classList.remove('active');
-    index = (index + 1) % testimonials.length;
-    testimonials[index].classList.add('active');
-  }, 4000);
+
 
  </script>
 
