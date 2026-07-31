@@ -1179,14 +1179,15 @@
     }
   </style>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2PVB77BT8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C57E30Y46J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'G-S2PVB77BT8');
-  </script>
+  gtag('config', 'G-C57E30Y46J');
+</script>
+
 
 
 </head>
@@ -1576,68 +1577,6 @@
     </div>
   </section>
 
-  <section id="analytics" style="padding-top: 0;">
-    <div
-      style="background:#111; padding:20px; border-radius:15px; border: 1px solid rgba(0, 247, 255, 0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-      <h3 style="text-align: center; color: #00f7ff; margin-bottom: 20px; font-size: 1.1rem; opacity: 0.8;">Live Visitor
-        Analytics</h3>
-      <div id="analytics-container"
-        style="position:relative; width:100%; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center;">
-        <!-- Placeholder while loading -->
-        <div id="analytics-placeholder"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #00f7ff; font-weight: 600;">
-          <div class="loader-spinner"
-            style="width: 40px; height: 40px; border: 3px solid rgba(0,247,255,0.1); border-top-color: #00f7ff; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 15px;">
-          </div>
-          <span>Loading Real-time Analytics...</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <style>
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-  </style>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const container = document.getElementById('analytics-container');
-      const placeholder = document.getElementById('analytics-placeholder');
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Create iframe only when visible
-            const iframe = document.createElement('iframe');
-            iframe.src = "https://lookerstudio.google.com/embed/reporting/2aff3e4e-0800-4ed2-af9d-2eb47d4d2eed/page/kIV1C";
-            iframe.style.position = "absolute";
-            iframe.style.top = "0";
-            iframe.style.left = "0";
-            iframe.style.width = "100%";
-            iframe.style.height = "100%";
-            iframe.style.border = "none";
-            iframe.style.borderRadius = "12px";
-            iframe.style.filter = "invert(1) hue-rotate(180deg)";
-            iframe.allowFullscreen = true;
-
-            iframe.onload = () => {
-              placeholder.style.display = 'none';
-            };
-
-            container.appendChild(iframe);
-            observer.unobserve(container);
-          }
-        });
-      }, { threshold: 0.1 });
-
-      observer.observe(container);
-    });
-  </script>
-
 
 
   <!-- Certificate Lightbox Modal -->
@@ -1647,8 +1586,39 @@
   </div>
 
   <footer>
+    <div class="footer-stats" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 15px; color: #ccc;">
+      <div class="stat-item" style="text-align: center;">
+        <span style="display: block; font-size: 1.5rem; color: #00f7ff; font-weight: bold;" id="profile-views-count">-</span>
+        <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Profile Views</span>
+      </div>
+      <div class="stat-item" style="text-align: center;">
+        <span style="display: block; font-size: 1.5rem; color: #00f7ff; font-weight: bold;" id="events-count">-</span>
+        <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Events</span>
+      </div>
+      <div class="stat-item" style="text-align: center;">
+        <span style="display: block; font-size: 1.5rem; color: #00f7ff; font-weight: bold;" id="downloads-count">-</span>
+        <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Downloads</span>
+      </div>
+    </div>
     <p>&copy; 2025 <span style="color:#00f7ff;">Arirama Selvam M</span> | All Rights Reserved</p>
   </footer>
+
+  <script>
+    // Fetch live stats from the auto-generated stats.json file
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const response = await fetch('./stats.json');
+        if (response.ok) {
+          const stats = await response.json();
+          document.getElementById('profile-views-count').textContent = stats.profile_views || 0;
+          document.getElementById('events-count').textContent = stats.events || 0;
+          document.getElementById('downloads-count').textContent = stats.downloads || 0;
+        }
+      } catch (error) {
+        console.error('Failed to load stats:', error);
+      }
+    });
+  </script>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
   <!-- <script src="https://cdn.jsdelivr.net/gh/AriProject9787/MasterControl@main/script/script.js"></script> -->
