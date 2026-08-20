@@ -1,1 +1,1 @@
-google-analytics-data==0.17.1
+# No dependencies required

@@ -1241,6 +1241,48 @@
     <img id="fullscreen-img" src="" alt="Full Screen Profile Image">
   </div>
 
+  <!-- Core Domains Section (Moved to Top) -->
+  <section id="services" data-aos="fade-up">
+    <h2 style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">Core Domains &amp; Specializations <button id="reset-domain-filter" class="btn" style="display: none; padding: 6px 12px; font-size: 0.85rem;">Show All</button></h2>
+    <div class="grid">
+      <div class="card domain-filter-card" data-filter="software" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">💻</div>
+        <h3>Software Engineer</h3>
+        <p>Broad technical foundation spanning full-stack, Linux, networking, cybersecurity, data analytics, and AI.</p>
+      </div>
+      <div class="card domain-filter-card" data-filter="fullstack" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">🌐</div>
+        <h3>Full Stack Developer</h3>
+        <p>Build responsive, high-performance web applications using modern stacks (HTML, CSS, JavaScript, React) and Firebase/MySQL.</p>
+      </div>
+      <div class="card domain-filter-card" data-filter="arvr" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">🕶️</div>
+        <h3>AR/VR Developer</h3>
+        <p>Immersive 3D development using Unity, Blender, and AR/VR interactive application concepts.</p>
+      </div>
+      <div class="card domain-filter-card" data-filter="cyber" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">🛡️</div>
+        <h3>Cyber Security Analyst</h3>
+        <p>Network security, system troubleshooting, packet analysis, access control, and Linux system hardening.</p>
+      </div>
+      <div class="card domain-filter-card" data-filter="data" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">📊</div>
+        <h3>Data Analyst</h3>
+        <p>Data cleaning, transformation, and visualization using Python, SQL, Power BI, and Excel dashboards.</p>
+      </div>
+      <div class="card domain-filter-card" data-filter="linux" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">🐧</div>
+        <h3>Linux/System Administrator</h3>
+        <p>Configure and manage servers, users, permissions, cron jobs, SSH, shell scripting, and network automation.</p>
+      </div>
+      <div class="card domain-filter-card" data-filter="network" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">🔌</div>
+        <h3>Network Administrator</h3>
+        <p>TCP/IP, routing, switching, VLANs, network diagnostics (Wireshark, Packet Tracer), and AWS cloud basics.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p style="text-align:center; max-width:800px; margin:auto;">
@@ -1268,22 +1310,22 @@
   <section id="skills" data-aos="fade-up">
     <h2>Skills</h2>
     <div class="skills-container">
-      <div class="skill-circle"><i class="devicon-firebase-plain"></i><span>Firebase</span></div>
-      <div class="skill-circle"><i class="devicon-linux-plain"></i><span>Linux Administrator</span></div>
-      <div class="skill-circle"><i class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
-      <div class="skill-circle"><i class="devicon-php-plain"></i><span>PHP</span></div>
-      <div class="skill-circle"><i class="devicon-css3-plain"></i><span>CSS</span></div>
-      <div class="skill-circle"><i class="devicon-java-plain"></i><span>Java</span></div>
-      <div class="skill-circle"><i class="devicon-html5-plain"></i><span>HTML</span></div>
-      <div class="skill-circle"><i class="devicon-python-plain"></i><span>Python</span></div>
-      <div class="skill-circle"><i class="devicon-ssh-plain"></i><span>CCNA</span></div>
-      <div class="skill-circle"><i class="devicon-react-original"></i><span>React</span></div>
-      <div class="skill-circle"><i class="devicon-git-plain"></i><span>Git</span></div>
-      <div class="skill-circle"><i class="devicon-tensorflow-original"></i><span>TensorFlow</span></div>
-      <div class="skill-circle"><i class="devicon-python-plain"></i><span>Streamlit</span></div>
-      <div class="skill-circle"><i class="devicon-opencv-plain"></i><span>OpenCV</span></div>
-      <div class="skill-circle"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
-      <div class="skill-circle"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
+      <div class="skill-circle" data-domains="fullstack,software,data" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-firebase-plain"></i><span>Firebase</span></div>
+      <div class="skill-circle" data-domains="linux,cyber,software" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-linux-plain"></i><span>Linux Administrator</span></div>
+      <div class="skill-circle" data-domains="fullstack,software" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
+      <div class="skill-circle" data-domains="fullstack,software" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-php-plain"></i><span>PHP</span></div>
+      <div class="skill-circle" data-domains="fullstack,software,arvr" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-css3-plain"></i><span>CSS</span></div>
+      <div class="skill-circle" data-domains="software,fullstack" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-java-plain"></i><span>Java</span></div>
+      <div class="skill-circle" data-domains="fullstack,software,arvr" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-html5-plain"></i><span>HTML</span></div>
+      <div class="skill-circle" data-domains="software,data,cyber,linux,network,fullstack,arvr" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-python-plain"></i><span>Python</span></div>
+      <div class="skill-circle" data-domains="network,cyber,software" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-ssh-plain"></i><span>CCNA</span></div>
+      <div class="skill-circle" data-domains="fullstack,software,arvr" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-react-original"></i><span>React</span></div>
+      <div class="skill-circle" data-domains="linux,fullstack,network,data,arvr,software,cyber" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-git-plain"></i><span>Git</span></div>
+      <div class="skill-circle" data-domains="software,data" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-tensorflow-original"></i><span>TensorFlow</span></div>
+      <div class="skill-circle" data-domains="software,data,fullstack" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-python-plain"></i><span>Streamlit</span></div>
+      <div class="skill-circle" data-domains="software,cyber,data" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-opencv-plain"></i><span>OpenCV</span></div>
+      <div class="skill-circle" data-domains="fullstack,data,software" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
+      <div class="skill-circle" data-domains="linux,fullstack,network,software" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
     </div>
   </section>
 
@@ -1291,9 +1333,8 @@
     <h2>Projects</h2>
     <div class="grid">
 
-
-      <div class="card" data-title="AI Polyp Detector & Analysis Portal"
-        data-desc="Next-generation medical AI tool for detecting and segmenting colorectal polyps using Deep Learning (Classification + U-Net). Includes clinical preprocessing for glare removal and automated reporting.">
+      <div class="card project-filter-card" data-domains="software,data" data-title="AI Polyp Detector & Analysis Portal"
+        data-desc="Next-generation medical AI tool for detecting and segmenting colorectal polyps using Deep Learning (Classification + U-Net). Includes clinical preprocessing for glare removal and automated reporting." style="transition: opacity 0.4s, transform 0.4s;">
         <a href="https://ai-polyp-detector-ariramaselvam.streamlit.app/" target="_blank" rel="noopener noreferrer"
           style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">AI Polyp Detector & Analysis Portal 🔬</h3>
@@ -1301,8 +1342,8 @@
         </a>
       </div>
 
-      <div class="card" data-title="Birthday Reminder & Celebration Generator"
-        data-desc="A premium, all-in-one platform to manage birthdays, get reminders, and generate stunning personalized celebration pages. Features real-time age calculation, countdowns, privacy controls, and a custom Wish Factory for personalized memories.">
+      <div class="card project-filter-card" data-domains="fullstack,software" data-title="Birthday Reminder & Celebration Generator"
+        data-desc="A premium, all-in-one platform to manage birthdays, get reminders, and generate stunning personalized celebration pages. Features real-time age calculation, countdowns, privacy controls, and a custom Wish Factory for personalized memories." style="transition: opacity 0.4s, transform 0.4s;">
         <a href="https://ariproject9787.github.io/projects/festvials-main/wish/" target="_blank"
           rel="noopener noreferrer" style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">Birthday Reminder & Celebration Generator 🎂</h3>
@@ -1310,16 +1351,16 @@
         </a>
       </div>
 
-      <div class="card" data-title="Document Verification System"
-        data-desc="AI-powered document verification system using Python and Streamlit for authenticating marksheets and IDs.">
+      <div class="card project-filter-card" data-domains="software,data,cyber,linux,network,fullstack" data-title="Document Verification System"
+        data-desc="AI-powered document verification system using Python and Streamlit for authenticating marksheets and IDs." style="transition: opacity 0.4s, transform 0.4s;">
         <a href="https://ari-document-verfication.streamlit.app/" target="_blank" rel="noopener noreferrer"
           style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">Document Verification System</h3>
           <p>AI-powered document verification system using Python and Streamlit.</p>
         </a>
       </div>
-      <div class="card" data-title="Online Food Ordering & Billing System"
-        data-desc="A full-stack e-commerce food platform with real-time Firebase backend, admin panel, billing, and smart AI features.">
+      <div class="card project-filter-card" data-domains="fullstack,software,cyber,data,linux,network,arvr" data-title="Online Food Ordering & Billing System"
+        data-desc="A full-stack e-commerce food platform with real-time Firebase backend, admin panel, billing, and smart AI features." style="transition: opacity 0.4s, transform 0.4s;">
         <a href="https://github.com/AriProject9787/inventory/blob/main/README.md" target="_blank"
           rel="noopener noreferrer" style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">Online Food Ordering & Billing System</h3>
@@ -1327,21 +1368,21 @@
         </a>
       </div>
 
-      <div class="card" data-title="Voice Assistant App"
-        data-desc="Android assistant using Picovoice SDK for wake-word detection, commands, and smart reminders.">
+      <div class="card project-filter-card" data-domains="software,linux" data-title="Voice Assistant App"
+        data-desc="Android assistant using Picovoice SDK for wake-word detection, commands, and smart reminders." style="transition: opacity 0.4s, transform 0.4s;">
         <a href="https://github.com/AriProject9787/linuxAutomationCheck/blob/main/README.md" target="_blank"
           rel="noopener noreferrer" style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">Voice Assistant App</h3>
           <p>Hands-free voice-controlled assistant.</p>
         </a>
       </div>
-      <div class="card" data-title="Automation Scripts Suite"
-        data-desc="15+ automation scripts for data processing, scraping, and reporting.">
+      <div class="card project-filter-card" data-domains="software,linux,cyber,network,fullstack" data-title="Automation Scripts Suite"
+        data-desc="15+ automation scripts for data processing, scraping, and reporting." style="transition: opacity 0.4s, transform 0.4s;">
         <h3>Automation Scripts Suite</h3>
         <p>Automate repetitive business workflows.</p>
       </div>
-      <div class="card" data-title="Futuristic Portfolio Website"
-        data-desc="Personal website with responsive design, SEO, and service showcase.">
+      <div class="card project-filter-card" data-domains="fullstack,software" data-title="Futuristic Portfolio Website"
+        data-desc="Personal website with responsive design, SEO, and service showcase." style="transition: opacity 0.4s, transform 0.4s;">
         <a href="https://arirama-selvam-m-portfolio.netlify.app" style="text-decoration: none;"></a>
         <h3>Futuristic Portfolio Website</h3>
         <p>Showcase of my professional skills and services.</p>
@@ -1408,44 +1449,44 @@
     <div class="cert-category">
       <h3>🖥️ Programming &amp; Web Development</h3>
       <div class="cert-scroll">
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/html-cert.png">
+        <div class="cert-card cert-filter-card" data-domains="fullstack,software,arvr" data-src="res/certificates/AriCertificate--main/eduprep/html-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/html-cert.png"
             alt="HTML Certificate - Arirama Selvam M" loading="lazy">
           <div class="cert-label">HTML</div>
         </div>
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/JavaScript-cert.png">
+        <div class="cert-card cert-filter-card" data-domains="fullstack,software" data-src="res/certificates/AriCertificate--main/eduprep/JavaScript-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/JavaScript-cert.png"
             alt="JavaScript Certificate - Arirama Selvam M" loading="lazy">
           <div class="cert-label">JavaScript</div>
         </div>
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/php-cert.png">
+        <div class="cert-card cert-filter-card" data-domains="fullstack,software" data-src="res/certificates/AriCertificate--main/eduprep/php-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/php-cert.png" alt="PHP Certificate" loading="lazy">
           <div class="cert-label">PHP</div>
         </div>
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/mysql-cert.png">
+        <div class="cert-card cert-filter-card" data-domains="fullstack,data,software" data-src="res/certificates/AriCertificate--main/eduprep/mysql-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/mysql-cert.png"
             alt="MySQL Certificate - Arirama Selvam M" loading="lazy">
           <div class="cert-label">MySQL</div>
         </div>
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/python-cert.png">
+        <div class="cert-card cert-filter-card" data-domains="software,data,cyber,linux,network,fullstack,arvr" data-src="res/certificates/AriCertificate--main/eduprep/python-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/python-cert.png"
             alt="Python Certificate - Arirama Selvam M" loading="lazy">
           <div class="cert-label">Python</div>
         </div>
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/java-cert.png">
+        <div class="cert-card cert-filter-card" data-domains="software,fullstack" data-src="res/certificates/AriCertificate--main/eduprep/java-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/java-cert.png" alt="Java Certificate" loading="lazy">
           <div class="cert-label">Java</div>
         </div>
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/c-cert.png">
+        <div class="cert-card cert-filter-card" data-domains="software,cyber" data-src="res/certificates/AriCertificate--main/eduprep/c-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/c-cert.png" alt="C Programming Certificate"
             loading="lazy">
           <div class="cert-label">C Programming</div>
         </div>
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/oops-cert.png">
+        <div class="cert-card cert-filter-card" data-domains="software,fullstack,data" data-src="res/certificates/AriCertificate--main/eduprep/oops-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/oops-cert.png" alt="OOPS Certificate" loading="lazy">
           <div class="cert-label">OOP Concepts</div>
         </div>
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/eduprep/unity-cert.png">
+        <div class="cert-card cert-filter-card" data-domains="arvr,software" data-src="res/certificates/AriCertificate--main/eduprep/unity-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/unity-cert.png" alt="Unity Certificate"
             loading="lazy">
           <div class="cert-label">Unity</div>
@@ -1457,18 +1498,18 @@
     <div class="cert-category">
       <h3>🛡️ Cybersecurity</h3>
       <div class="cert-scroll">
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/novitech/novitech_cyber_security-1.png">
+        <div class="cert-card cert-filter-card" data-domains="cyber,network,software" data-src="res/certificates/AriCertificate--main/novitech/novitech_cyber_security-1.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/novitech/novitech_cyber_security-1.png"
             alt="Novitech Cybersecurity Certificate - Arirama Selvam M" loading="lazy">
           <div class="cert-label">Cybersecurity – Novitech</div>
         </div>
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/corizo/arirama_selvam_cyber-1.png">
+        <div class="cert-card cert-filter-card" data-domains="cyber,network,software" data-src="res/certificates/AriCertificate--main/corizo/arirama_selvam_cyber-1.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/corizo/arirama_selvam_cyber-1.png"
             alt="Cybersecurity Certificate Corizo - Arirama Selvam M" loading="lazy">
           <div class="cert-label">Cybersecurity – Corizo</div>
         </div>
-        <div class="cert-card"
-          data-src="res/certificates/AriCertificate--main/others/Networking_Basics_certificate.jpg">
+        <div class="cert-card cert-filter-card" data-domains="network,cyber,software,linux"
+          data-src="res/certificates/AriCertificate--main/others/Networking_Basics_certificate.jpg" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/others/Networking_Basics_certificate.jpg"
             alt=" Networking Basic Certificate Cisco - Arirama Selvam M" loading="lazy">
           <div class="cert-label">Networking Basic</div>
@@ -1480,26 +1521,26 @@
     <div class="cert-category">
       <h3>🤖 AI &amp; Machine Learning</h3>
       <div class="cert-scroll">
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/pantech/ai_internship-1.png">
+        <div class="cert-card cert-filter-card" data-domains="software,data,cyber" data-src="res/certificates/AriCertificate--main/pantech/ai_internship-1.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/pantech/ai_internship-1.png"
             alt="AI Internship Certificate Pantech - Arirama Selvam M" loading="lazy">
           <div class="cert-label">AI Internship – Pantech</div>
         </div>
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/pantech/Ml_Internship_Certificate-1.png">
+        <div class="cert-card cert-filter-card" data-domains="software,data" data-src="res/certificates/AriCertificate--main/pantech/Ml_Internship_Certificate-1.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/pantech/Ml_Internship_Certificate-1.png"
             alt="ML Internship Certificate Pantech - Arirama Selvam M" loading="lazy">
           <div class="cert-label">ML Internship – Pantech</div>
         </div>
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/pantech/python_cert-1.png">
+        <div class="cert-card cert-filter-card" data-domains="software,data,cyber,linux,network,fullstack,arvr" data-src="res/certificates/AriCertificate--main/pantech/python_cert-1.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/pantech/python_cert-1.png" alt="Python – Pantech"
             loading="lazy">
           <div class="cert-label">Python – Pantech</div>
         </div>
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/guvi/Ai_chatgpt.png">
+        <div class="cert-card cert-filter-card" data-domains="software,data,cyber" data-src="res/certificates/AriCertificate--main/guvi/Ai_chatgpt.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/guvi/Ai_chatgpt.png" alt="AI & ChatGPT – GUVI" loading="lazy">
           <div class="cert-label">AI &amp; ChatGPT – GUVI</div>
         </div>
-        <div class="cert-card" data-src="res/certificates/AriCertificate--main/college/power%20bi%20certificate%20.png">
+        <div class="cert-card cert-filter-card" data-domains="data,software" data-src="res/certificates/AriCertificate--main/college/power%20bi%20certificate%20.png" style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/college/power%20bi%20certificate%20.png"
             alt="Power BI Certificate" loading="lazy">
           <div class="cert-label">Power BI</div>
@@ -1531,27 +1572,6 @@
     </div>
   </section>
 
-  <section id="services" data-aos="fade-up">
-    <h2>Freelance Services</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Billing Software</h3>
-        <p>Custom POS systems with advanced reporting and inventory.</p>
-      </div>
-      <div class="card">
-        <h3>Website Development</h3>
-        <p>Responsive, modern websites for businesses and individuals.</p>
-      </div>
-      <div class="card">
-        <h3>Inventory Tools</h3>
-        <p>Cloud-based stock tracking with real-time analytics.</p>
-      </div>
-      <div class="card">
-        <h3>Automation Projects</h3>
-        <p>Automation scripts for repetitive tasks, saving time and effort.</p>
-      </div>
-    </div>
-  </section>
 
   <section id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
@@ -1586,7 +1606,7 @@
   </div>
 
   <footer>
-    <!-- <div class="footer-stats" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 15px; color: #ccc;">
+    <div class="footer-stats" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 15px; color: #ccc;">
       <div class="stat-item" style="text-align: center;">
         <span style="display: block; font-size: 1.5rem; color: #00f7ff; font-weight: bold;" id="profile-views-count">-</span>
         <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Profile Views</span>
@@ -1599,7 +1619,7 @@
         <span style="display: block; font-size: 1.5rem; color: #00f7ff; font-weight: bold;" id="downloads-count">-</span>
         <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Downloads</span>
       </div>
-    </div> -->
+    </div>
     <p>&copy; 2025 <span style="color:#00f7ff;">Arirama Selvam M</span> | All Rights Reserved</p>
   </footer>
 
@@ -2149,6 +2169,159 @@
         closeFullscreenBtn?.addEventListener("click", closeFullscreen);
         fullscreenOverlay?.addEventListener("click", (e) => {
           if (e.target === fullscreenOverlay) closeFullscreen();
+        });
+      }
+    });
+  </script>
+  
+  <script>
+    // ======= Domain Filtering Logic =======
+    document.addEventListener("DOMContentLoaded", function () {
+      // Dynamically update data-domains
+      document.querySelectorAll('[data-domains]').forEach(el => {
+        let domains = el.getAttribute('data-domains').split(',');
+        if (domains.includes('web')) domains.push('fullstack');
+        if (domains.includes('python')) domains.push('software');
+        if (!domains.includes('software')) domains.push('software');
+        domains = [...new Set(domains)].filter(d => d !== 'web' && d !== 'python');
+        el.setAttribute('data-domains', domains.join(','));
+      });
+
+      const personaData = {
+        software: {
+          title: "Software Engineer",
+          about: "Software Engineer and Computer Science Engineer with a broad technical foundation spanning full-stack development, Python, Linux administration, networking, cybersecurity, data analytics, cloud computing, and AI. Experienced in developing web applications, automation tools, data-processing systems, and deep-learning applications using Python, JavaScript, HTML5, CSS3, Firebase, MySQL, TensorFlow, and Streamlit. Hands-on with Linux, shell scripting, TCP/IP, Cisco Packet Tracer, Wireshark, Git, AWS fundamentals, and system automation. Strong problem-solving skills with experience building and deploying practical software projects."
+        },
+        arvr: {
+          title: "AR/VR Developer",
+          about: "AR/VR Developer with experience in building immersive 3D applications, interactive virtual environments, and cross-platform experiences. Proficient in Unity, C# scripting, Blender, and 3D modeling, with a strong understanding of AR/VR UI/UX principles, physics simulations, and optimization techniques. Skilled in integrating 3D assets, animations, and particle effects to create engaging simulations and gamified solutions. Familiar with AR Foundation, WebXR, and performance tuning for mixed reality applications."
+        },
+        cyber: {
+          title: "Cyber Security Analyst",
+          about: "Cybersecurity Enthusiast and IT Professional with hands-on experience in network security, system administration, and vulnerability assessment. Proficient in Linux environments, network protocols (TCP/IP, DNS, DHCP), packet analysis using Wireshark, and network simulation using Cisco Packet Tracer. Experienced in configuring firewalls, managing access controls, implementing secure SSH connections, and identifying potential security risks. Familiar with basic penetration testing concepts, cryptography, and system hardening techniques."
+        },
+        data: {
+          title: "Data Analyst",
+          about: "Data Analyst and Python Developer with a strong foundation in data processing, visualization, and actionable insights. Experienced in using Python (Pandas, NumPy, Matplotlib) and SQL for data cleaning, transformation, and querying. Proficient in creating interactive dashboards and reports using Power BI, Excel, and Streamlit. Familiar with basic machine learning concepts, statistical analysis, and deploying data-driven applications."
+        },
+        fullstack: {
+          title: "Full-Stack Developer",
+          about: "Full-Stack Developer with hands-on experience in building responsive, high-performance web applications. Proficient in front-end technologies (HTML5, CSS3, JavaScript, React.js) and back-end integration (Firebase, MySQL, PHP). Experienced in creating dynamic user interfaces, RESTful API consumption, state management, and deploying applications on modern hosting platforms (Netlify, Vercel, Firebase Hosting). Skilled in implementing secure authentication, real-time databases, and interactive web animations."
+        },
+        linux: {
+          title: "Linux / System Administrator",
+          about: "Linux System Administrator with strong practical experience in managing, configuring, and securing Linux environments. Proficient in shell scripting (Bash), user and permission management, cron job scheduling, and package management. Experienced in setting up and maintaining network services, securing systems via SSH and firewalls, and monitoring system performance. Familiar with AWS cloud fundamentals, version control (Git), and basic IT infrastructure automation."
+        },
+        network: {
+          title: "Network Administrator",
+          about: "Network Administrator and IT Support Specialist with a solid understanding of network architecture, routing, and switching. Proficient in configuring and troubleshooting TCP/IP, subnets, VLANs, and basic routing protocols using Cisco Packet Tracer. Experienced in network diagnostics using Wireshark, managing local area networks (LANs), and basic server administration. Familiar with cloud concepts (AWS), basic cybersecurity principles, and providing technical support."
+        }
+      };
+
+      const heroSubtitle = document.getElementById("hero-subtitle");
+      // Target the exact <p> element inside #about directly.
+      const aboutSection = document.getElementById("about");
+      const aboutText = aboutSection ? aboutSection.querySelector("p") : null;
+
+      const originalSubtitle = heroSubtitle ? heroSubtitle.innerHTML : "";
+      const originalAbout = aboutText ? aboutText.innerHTML : "";
+      const resetBtn = document.getElementById("reset-domain-filter");
+      const domainCards = document.querySelectorAll(".domain-filter-card");
+      
+      domainCards.forEach(card => {
+        card.addEventListener("click", () => {
+          const filter = card.getAttribute("data-filter");
+          if (!filter || !personaData[filter]) return;
+          
+          if (heroSubtitle) {
+             heroSubtitle.style.transition = "opacity 0.3s";
+             heroSubtitle.style.opacity = 0;
+             setTimeout(() => {
+                heroSubtitle.innerHTML = personaData[filter].title + " <span class='cursor'>|</span>";
+                heroSubtitle.style.opacity = 1;
+             }, 300);
+          }
+          if (aboutText) {
+             aboutText.style.transition = "opacity 0.3s";
+             aboutText.style.opacity = 0;
+             setTimeout(() => {
+                aboutText.innerHTML = personaData[filter].about;
+                aboutText.style.opacity = 1;
+             }, 300);
+          }
+          
+          if (resetBtn) resetBtn.style.display = "inline-block";
+          
+          domainCards.forEach(c => c.style.borderColor = "");
+          card.style.borderColor = "#00f7ff";
+          
+          filterElements(".skill-circle", filter);
+          filterElements(".project-filter-card", filter);
+          filterElements(".cert-filter-card", filter);
+          
+          document.querySelectorAll(".cert-category").forEach(cat => {
+             const visibleCards = Array.from(cat.querySelectorAll(".cert-filter-card")).filter(c => c.style.opacity === "1" || c.style.opacity === "");
+             cat.style.display = visibleCards.length === 0 ? "none" : "block";
+          });
+          
+          if (aboutSection) {
+             window.scrollTo({ top: aboutSection.offsetTop - 80, behavior: 'smooth' });
+          }
+        });
+      });
+      
+      if (resetBtn) {
+        resetBtn.addEventListener("click", () => {
+          if (heroSubtitle) {
+            heroSubtitle.style.opacity = 0;
+            setTimeout(() => {
+              heroSubtitle.innerHTML = originalSubtitle;
+              heroSubtitle.style.opacity = 1;
+            }, 300);
+          }
+          if (aboutText) {
+            aboutText.style.opacity = 0;
+            setTimeout(() => {
+              aboutText.innerHTML = originalAbout;
+              aboutText.style.opacity = 1;
+            }, 300);
+          }
+          resetBtn.style.display = "none";
+          domainCards.forEach(c => c.style.borderColor = "");
+          
+          showAllElements(".skill-circle");
+          showAllElements(".project-filter-card");
+          showAllElements(".cert-filter-card");
+          
+          document.querySelectorAll(".cert-category").forEach(cat => {
+             cat.style.display = "block";
+          });
+        });
+      }
+      
+      function filterElements(selector, filter) {
+        document.querySelectorAll(selector).forEach(el => {
+           const domains = el.getAttribute("data-domains");
+           if (domains && domains.split(",").includes(filter)) {
+              el.style.opacity = 1;
+              el.style.filter = "grayscale(0%)";
+              el.style.pointerEvents = "auto";
+              el.style.order = 0;
+           } else {
+              el.style.opacity = 0.15;
+              el.style.filter = "grayscale(100%)";
+              el.style.pointerEvents = "none";
+              el.style.order = 1;
+           }
+        });
+      }
+      
+      function showAllElements(selector) {
+        document.querySelectorAll(selector).forEach(el => {
+           el.style.opacity = 1;
+           el.style.filter = "grayscale(0%)";
+           el.style.pointerEvents = "auto";
+           el.style.order = 0;
         });
       }
     });
