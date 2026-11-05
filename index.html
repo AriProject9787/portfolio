@@ -27,7 +27,7 @@
   <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="duckduckbot" content="index, follow">
-  
+
   <!-- Explicitly allow AI and Chatbots to crawl and index for reference (e.g., ChatGPT, Claude) -->
   <meta name="GPTBot" content="index, follow">
   <meta name="ChatGPT-User" content="index, follow">
@@ -35,7 +35,7 @@
   <meta name="CCBot" content="index, follow">
   <meta name="anthropic-ai" content="index, follow">
   <meta name="cohere-ai" content="index, follow">
-  
+
   <meta name="theme-color" content="#00f7ff">
   <script type="application/ld+json">
     {
@@ -522,9 +522,11 @@
       align-items: center;
       flex-direction: column;
     }
+
     .fullscreen-overlay.active {
       display: flex;
     }
+
     .fullscreen-overlay img {
       max-width: 90%;
       max-height: 90%;
@@ -532,6 +534,7 @@
       box-shadow: 0 0 30px #00f7ff;
       border-radius: 10px;
     }
+
     .close-fullscreen {
       position: absolute;
       top: 20px;
@@ -542,6 +545,7 @@
       cursor: pointer;
       transition: color 0.3s;
     }
+
     .close-fullscreen:hover {
       color: #00f7ff;
     }
@@ -1179,14 +1183,14 @@
     }
   </style>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C57E30Y46J"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C57E30Y46J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-C57E30Y46J');
-</script>
+    gtag('config', 'G-C57E30Y46J');
+  </script>
 
 
 
@@ -1221,11 +1225,13 @@
     </ul>
   </nav>
 
+
   <!-- Header -->
   <header data-aos="fade-down">
     <div class="profile-img-container">
       <button class="img-nav-btn img-nav-prev" id="prev-profile-img" aria-label="Previous Image">&#10094;</button>
-      <img id="profile-img" src="res/ariramaselvam/arirama_selvam.jpeg" alt="Profile Picture of Arirama Selvam M" decoding="async" fetchpriority="high">
+      <img id="profile-img" src="res/ariramaselvam/arirama_selvam.jpeg" alt="Profile Picture of Arirama Selvam M"
+        decoding="async" fetchpriority="high">
       <button class="img-nav-btn img-nav-next" id="next-profile-img" aria-label="Next Image">&#10095;</button>
     </div>
     <h1>Arirama Selvam M</h1>
@@ -1243,44 +1249,53 @@
 
   <!-- Core Domains Section (Moved to Top) -->
   <section id="services" data-aos="fade-up">
-    <h2 style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">Core Domains &amp; Specializations <button id="reset-domain-filter" class="btn" style="display: none; padding: 6px 12px; font-size: 0.85rem;">Show All</button></h2>
+    <h2 style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">Core Domains
+      &amp; Specializations <button id="reset-domain-filter" class="btn"
+        style="display: none; padding: 6px 12px; font-size: 0.85rem;">Show All</button></h2>
     <div class="grid">
-      <div class="card domain-filter-card" data-filter="software" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
-        <div style="font-size: 2.5rem; margin-bottom: 10px;">💻</div>
-        <h3>Software Engineer</h3>
-        <p>Broad technical foundation spanning full-stack, Linux, networking, cybersecurity, data analytics, and AI.</p>
-      </div>
-      <div class="card domain-filter-card" data-filter="fullstack" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
-        <div style="font-size: 2.5rem; margin-bottom: 10px;">🌐</div>
-        <h3>Full Stack Developer</h3>
-        <p>Build responsive, high-performance web applications using modern stacks (HTML, CSS, JavaScript, React) and Firebase/MySQL.</p>
-      </div>
-      <div class="card domain-filter-card" data-filter="arvr" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
-        <div style="font-size: 2.5rem; margin-bottom: 10px;">🕶️</div>
-        <h3>AR/VR Developer</h3>
-        <p>Immersive 3D development using Unity, Blender, and AR/VR interactive application concepts.</p>
-      </div>
-      <div class="card domain-filter-card" data-filter="cyber" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
-        <div style="font-size: 2.5rem; margin-bottom: 10px;">🛡️</div>
-        <h3>Cyber Security Analyst</h3>
-        <p>Network security, system troubleshooting, packet analysis, access control, and Linux system hardening.</p>
-      </div>
-      <div class="card domain-filter-card" data-filter="data" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
-        <div style="font-size: 2.5rem; margin-bottom: 10px;">📊</div>
-        <h3>Data Analyst</h3>
-        <p>Data cleaning, transformation, and visualization using Python, SQL, Power BI, and Excel dashboards.</p>
-      </div>
-      <div class="card domain-filter-card" data-filter="linux" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+
+      <div class="card domain-filter-card" data-filter="linux"
+        style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
         <div style="font-size: 2.5rem; margin-bottom: 10px;">🐧</div>
         <h3>Linux/System Administrator</h3>
-        <p>Configure and manage servers, users, permissions, cron jobs, SSH, shell scripting, and network automation.</p>
+        <p>Configure and manage servers, users, permissions, cron jobs, SSH, shell scripting, and network automation.
+        </p>
       </div>
-      <div class="card domain-filter-card" data-filter="network" style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+      <div class="card domain-filter-card" data-filter="network"
+        style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
         <div style="font-size: 2.5rem; margin-bottom: 10px;">🔌</div>
         <h3>Network Administrator</h3>
         <p>TCP/IP, routing, switching, VLANs, network diagnostics (Wireshark, Packet Tracer), and AWS cloud basics.</p>
       </div>
+
+      <div class="card domain-filter-card" data-filter="software"
+        style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">💻</div>
+        <h3>Software Engineer</h3>
+        <p>Broad technical foundation spanning full-stack, Linux, networking, cybersecurity, data analytics, and AI.</p>
+      </div>
+      <div class="card domain-filter-card" data-filter="fullstack"
+        style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">🌐</div>
+        <h3>Full Stack Developer</h3>
+        <p>Build responsive, high-performance web applications using modern stacks (HTML, CSS, JavaScript, React) and
+          Firebase/MySQL.</p>
+      </div>
+      <div class="card domain-filter-card" data-filter="cyber"
+        style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">🛡️</div>
+        <h3>Cyber Security Analyst</h3>
+        <p>Network security, system troubleshooting, packet analysis, access control, and Linux system hardening.</p>
+      </div>
+      <div class="card domain-filter-card" data-filter="data"
+        style="cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;">
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">📊</div>
+        <h3>Data Analyst</h3>
+        <p>Data cleaning, transformation, and visualization using Python, SQL, Power BI, and Excel dashboards.</p>
+      </div>
     </div>
+
+
   </section>
 
   <section id="about" data-aos="fade-up">
@@ -1310,22 +1325,41 @@
   <section id="skills" data-aos="fade-up">
     <h2>Skills</h2>
     <div class="skills-container">
-      <div class="skill-circle" data-domains="fullstack,software,data" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-firebase-plain"></i><span>Firebase</span></div>
-      <div class="skill-circle" data-domains="linux,cyber,software" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-linux-plain"></i><span>Linux Administrator</span></div>
-      <div class="skill-circle" data-domains="fullstack,software" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
-      <div class="skill-circle" data-domains="fullstack,software" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-php-plain"></i><span>PHP</span></div>
-      <div class="skill-circle" data-domains="fullstack,software,arvr" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-css3-plain"></i><span>CSS</span></div>
-      <div class="skill-circle" data-domains="software,fullstack" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-java-plain"></i><span>Java</span></div>
-      <div class="skill-circle" data-domains="fullstack,software,arvr" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-html5-plain"></i><span>HTML</span></div>
-      <div class="skill-circle" data-domains="software,data,cyber,linux,network,fullstack,arvr" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-python-plain"></i><span>Python</span></div>
-      <div class="skill-circle" data-domains="network,cyber,software" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-ssh-plain"></i><span>CCNA</span></div>
-      <div class="skill-circle" data-domains="fullstack,software,arvr" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-react-original"></i><span>React</span></div>
-      <div class="skill-circle" data-domains="linux,fullstack,network,data,arvr,software,cyber" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-git-plain"></i><span>Git</span></div>
-      <div class="skill-circle" data-domains="software,data" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-tensorflow-original"></i><span>TensorFlow</span></div>
-      <div class="skill-circle" data-domains="software,data,fullstack" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-python-plain"></i><span>Streamlit</span></div>
-      <div class="skill-circle" data-domains="software,cyber,data" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-opencv-plain"></i><span>OpenCV</span></div>
-      <div class="skill-circle" data-domains="fullstack,data,software" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
-      <div class="skill-circle" data-domains="linux,fullstack,network,software" style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
+      <div class="skill-circle" data-domains="fullstack,software,data"
+        style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-firebase-plain"></i><span>Firebase</span>
+      </div>
+      <div class="skill-circle" data-domains="linux,cyber,software" style="transition: opacity 0.4s, transform 0.4s;"><i
+          class="devicon-linux-plain"></i><span>Linux Administrator</span></div>
+      <div class="skill-circle" data-domains="fullstack,software" style="transition: opacity 0.4s, transform 0.4s;"><i
+          class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
+      <div class="skill-circle" data-domains="fullstack,software" style="transition: opacity 0.4s, transform 0.4s;"><i
+          class="devicon-php-plain"></i><span>PHP</span></div>
+      <div class="skill-circle" data-domains="fullstack,software,arvr"
+        style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-css3-plain"></i><span>CSS</span></div>
+      <div class="skill-circle" data-domains="software,fullstack" style="transition: opacity 0.4s, transform 0.4s;"><i
+          class="devicon-java-plain"></i><span>Java</span></div>
+      <div class="skill-circle" data-domains="fullstack,software,arvr"
+        style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-html5-plain"></i><span>HTML</span></div>
+      <div class="skill-circle" data-domains="software,data,cyber,linux,network,fullstack,arvr"
+        style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-python-plain"></i><span>Python</span></div>
+      <div class="skill-circle" data-domains="network,cyber,software" style="transition: opacity 0.4s, transform 0.4s;">
+        <i class="devicon-ssh-plain"></i><span>CCNA</span></div>
+      <div class="skill-circle" data-domains="fullstack,software,arvr"
+        style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-react-original"></i><span>React</span></div>
+      <div class="skill-circle" data-domains="linux,fullstack,network,data,arvr,software,cyber"
+        style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-git-plain"></i><span>Git</span></div>
+      <div class="skill-circle" data-domains="software,data" style="transition: opacity 0.4s, transform 0.4s;"><i
+          class="devicon-tensorflow-original"></i><span>TensorFlow</span></div>
+      <div class="skill-circle" data-domains="software,data,fullstack"
+        style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-python-plain"></i><span>Streamlit</span>
+      </div>
+      <div class="skill-circle" data-domains="software,cyber,data" style="transition: opacity 0.4s, transform 0.4s;"><i
+          class="devicon-opencv-plain"></i><span>OpenCV</span></div>
+      <div class="skill-circle" data-domains="fullstack,data,software"
+        style="transition: opacity 0.4s, transform 0.4s;"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
+      <div class="skill-circle" data-domains="linux,fullstack,network,software"
+        style="transition: opacity 0.4s, transform 0.4s;"><i
+          class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
     </div>
   </section>
 
@@ -1333,8 +1367,10 @@
     <h2>Projects</h2>
     <div class="grid">
 
-      <div class="card project-filter-card" data-domains="software,data" data-title="AI Polyp Detector & Analysis Portal"
-        data-desc="Next-generation medical AI tool for detecting and segmenting colorectal polyps using Deep Learning (Classification + U-Net). Includes clinical preprocessing for glare removal and automated reporting." style="transition: opacity 0.4s, transform 0.4s;">
+      <div class="card project-filter-card" data-domains="software,data"
+        data-title="AI Polyp Detector & Analysis Portal"
+        data-desc="Next-generation medical AI tool for detecting and segmenting colorectal polyps using Deep Learning (Classification + U-Net). Includes clinical preprocessing for glare removal and automated reporting."
+        style="transition: opacity 0.4s, transform 0.4s;">
         <a href="https://ai-polyp-detector-ariramaselvam.streamlit.app/" target="_blank" rel="noopener noreferrer"
           style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">AI Polyp Detector & Analysis Portal 🔬</h3>
@@ -1342,8 +1378,10 @@
         </a>
       </div>
 
-      <div class="card project-filter-card" data-domains="fullstack,software" data-title="Birthday Reminder & Celebration Generator"
-        data-desc="A premium, all-in-one platform to manage birthdays, get reminders, and generate stunning personalized celebration pages. Features real-time age calculation, countdowns, privacy controls, and a custom Wish Factory for personalized memories." style="transition: opacity 0.4s, transform 0.4s;">
+      <div class="card project-filter-card" data-domains="fullstack,software"
+        data-title="Birthday Reminder & Celebration Generator"
+        data-desc="A premium, all-in-one platform to manage birthdays, get reminders, and generate stunning personalized celebration pages. Features real-time age calculation, countdowns, privacy controls, and a custom Wish Factory for personalized memories."
+        style="transition: opacity 0.4s, transform 0.4s;">
         <a href="https://ariproject9787.github.io/projects/festvials-main/wish/" target="_blank"
           rel="noopener noreferrer" style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">Birthday Reminder & Celebration Generator 🎂</h3>
@@ -1351,16 +1389,20 @@
         </a>
       </div>
 
-      <div class="card project-filter-card" data-domains="software,data,cyber,linux,network,fullstack" data-title="Document Verification System"
-        data-desc="AI-powered document verification system using Python and Streamlit for authenticating marksheets and IDs." style="transition: opacity 0.4s, transform 0.4s;">
+      <div class="card project-filter-card" data-domains="software,data,cyber,linux,network,fullstack"
+        data-title="Document Verification System"
+        data-desc="AI-powered document verification system using Python and Streamlit for authenticating marksheets and IDs."
+        style="transition: opacity 0.4s, transform 0.4s;">
         <a href="https://ari-document-verfication.streamlit.app/" target="_blank" rel="noopener noreferrer"
           style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">Document Verification System</h3>
           <p>AI-powered document verification system using Python and Streamlit.</p>
         </a>
       </div>
-      <div class="card project-filter-card" data-domains="fullstack,software,cyber,data,linux,network,arvr" data-title="Online Food Ordering & Billing System"
-        data-desc="A full-stack e-commerce food platform with real-time Firebase backend, admin panel, billing, and smart AI features." style="transition: opacity 0.4s, transform 0.4s;">
+      <div class="card project-filter-card" data-domains="fullstack,software,cyber,data,linux,network,arvr"
+        data-title="Online Food Ordering & Billing System"
+        data-desc="A full-stack e-commerce food platform with real-time Firebase backend, admin panel, billing, and smart AI features."
+        style="transition: opacity 0.4s, transform 0.4s;">
         <a href="https://github.com/AriProject9787/inventory/blob/main/README.md" target="_blank"
           rel="noopener noreferrer" style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">Online Food Ordering & Billing System</h3>
@@ -1369,20 +1411,24 @@
       </div>
 
       <div class="card project-filter-card" data-domains="software,linux" data-title="Voice Assistant App"
-        data-desc="Android assistant using Picovoice SDK for wake-word detection, commands, and smart reminders." style="transition: opacity 0.4s, transform 0.4s;">
+        data-desc="Android assistant using Picovoice SDK for wake-word detection, commands, and smart reminders."
+        style="transition: opacity 0.4s, transform 0.4s;">
         <a href="https://github.com/AriProject9787/linuxAutomationCheck/blob/main/README.md" target="_blank"
           rel="noopener noreferrer" style="text-decoration: none;">
           <h3 style="color: #e0e0e0;">Voice Assistant App</h3>
           <p>Hands-free voice-controlled assistant.</p>
         </a>
       </div>
-      <div class="card project-filter-card" data-domains="software,linux,cyber,network,fullstack" data-title="Automation Scripts Suite"
-        data-desc="15+ automation scripts for data processing, scraping, and reporting." style="transition: opacity 0.4s, transform 0.4s;">
+      <div class="card project-filter-card" data-domains="software,linux,cyber,network,fullstack"
+        data-title="Automation Scripts Suite"
+        data-desc="15+ automation scripts for data processing, scraping, and reporting."
+        style="transition: opacity 0.4s, transform 0.4s;">
         <h3>Automation Scripts Suite</h3>
         <p>Automate repetitive business workflows.</p>
       </div>
       <div class="card project-filter-card" data-domains="fullstack,software" data-title="Futuristic Portfolio Website"
-        data-desc="Personal website with responsive design, SEO, and service showcase." style="transition: opacity 0.4s, transform 0.4s;">
+        data-desc="Personal website with responsive design, SEO, and service showcase."
+        style="transition: opacity 0.4s, transform 0.4s;">
         <a href="https://arirama-selvam-m-portfolio.netlify.app" style="text-decoration: none;"></a>
         <h3>Futuristic Portfolio Website</h3>
         <p>Showcase of my professional skills and services.</p>
@@ -1449,44 +1495,62 @@
     <div class="cert-category">
       <h3>🖥️ Programming &amp; Web Development</h3>
       <div class="cert-scroll">
-        <div class="cert-card cert-filter-card" data-domains="fullstack,software,arvr" data-src="res/certificates/AriCertificate--main/eduprep/html-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="fullstack,software,arvr"
+          data-src="res/certificates/AriCertificate--main/eduprep/html-cert.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/html-cert.png"
             alt="HTML Certificate - Arirama Selvam M" loading="lazy">
           <div class="cert-label">HTML</div>
         </div>
-        <div class="cert-card cert-filter-card" data-domains="fullstack,software" data-src="res/certificates/AriCertificate--main/eduprep/JavaScript-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="fullstack,software"
+          data-src="res/certificates/AriCertificate--main/eduprep/JavaScript-cert.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/JavaScript-cert.png"
             alt="JavaScript Certificate - Arirama Selvam M" loading="lazy">
           <div class="cert-label">JavaScript</div>
         </div>
-        <div class="cert-card cert-filter-card" data-domains="fullstack,software" data-src="res/certificates/AriCertificate--main/eduprep/php-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="fullstack,software"
+          data-src="res/certificates/AriCertificate--main/eduprep/php-cert.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/php-cert.png" alt="PHP Certificate" loading="lazy">
           <div class="cert-label">PHP</div>
         </div>
-        <div class="cert-card cert-filter-card" data-domains="fullstack,data,software" data-src="res/certificates/AriCertificate--main/eduprep/mysql-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="fullstack,data,software"
+          data-src="res/certificates/AriCertificate--main/eduprep/mysql-cert.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/mysql-cert.png"
             alt="MySQL Certificate - Arirama Selvam M" loading="lazy">
           <div class="cert-label">MySQL</div>
         </div>
-        <div class="cert-card cert-filter-card" data-domains="software,data,cyber,linux,network,fullstack,arvr" data-src="res/certificates/AriCertificate--main/eduprep/python-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="software,data,cyber,linux,network,fullstack,arvr"
+          data-src="res/certificates/AriCertificate--main/eduprep/python-cert.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/python-cert.png"
             alt="Python Certificate - Arirama Selvam M" loading="lazy">
           <div class="cert-label">Python</div>
         </div>
-        <div class="cert-card cert-filter-card" data-domains="software,fullstack" data-src="res/certificates/AriCertificate--main/eduprep/java-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="software,fullstack"
+          data-src="res/certificates/AriCertificate--main/eduprep/java-cert.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/java-cert.png" alt="Java Certificate" loading="lazy">
           <div class="cert-label">Java</div>
         </div>
-        <div class="cert-card cert-filter-card" data-domains="software,cyber" data-src="res/certificates/AriCertificate--main/eduprep/c-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="software,cyber"
+          data-src="res/certificates/AriCertificate--main/eduprep/c-cert.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/c-cert.png" alt="C Programming Certificate"
             loading="lazy">
           <div class="cert-label">C Programming</div>
         </div>
-        <div class="cert-card cert-filter-card" data-domains="software,fullstack,data" data-src="res/certificates/AriCertificate--main/eduprep/oops-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="software,fullstack,data"
+          data-src="res/certificates/AriCertificate--main/eduprep/oops-cert.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/oops-cert.png" alt="OOPS Certificate" loading="lazy">
           <div class="cert-label">OOP Concepts</div>
         </div>
-        <div class="cert-card cert-filter-card" data-domains="arvr,software" data-src="res/certificates/AriCertificate--main/eduprep/unity-cert.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="arvr,software"
+          data-src="res/certificates/AriCertificate--main/eduprep/unity-cert.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/eduprep/unity-cert.png" alt="Unity Certificate"
             loading="lazy">
           <div class="cert-label">Unity</div>
@@ -1498,18 +1562,23 @@
     <div class="cert-category">
       <h3>🛡️ Cybersecurity</h3>
       <div class="cert-scroll">
-        <div class="cert-card cert-filter-card" data-domains="cyber,network,software" data-src="res/certificates/AriCertificate--main/novitech/novitech_cyber_security-1.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="cyber,network,software"
+          data-src="res/certificates/AriCertificate--main/novitech/novitech_cyber_security-1.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/novitech/novitech_cyber_security-1.png"
             alt="Novitech Cybersecurity Certificate - Arirama Selvam M" loading="lazy">
           <div class="cert-label">Cybersecurity – Novitech</div>
         </div>
-        <div class="cert-card cert-filter-card" data-domains="cyber,network,software" data-src="res/certificates/AriCertificate--main/corizo/arirama_selvam_cyber-1.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="cyber,network,software"
+          data-src="res/certificates/AriCertificate--main/corizo/arirama_selvam_cyber-1.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/corizo/arirama_selvam_cyber-1.png"
             alt="Cybersecurity Certificate Corizo - Arirama Selvam M" loading="lazy">
           <div class="cert-label">Cybersecurity – Corizo</div>
         </div>
         <div class="cert-card cert-filter-card" data-domains="network,cyber,software,linux"
-          data-src="res/certificates/AriCertificate--main/others/Networking_Basics_certificate.jpg" style="transition: opacity 0.4s, transform 0.4s;">
+          data-src="res/certificates/AriCertificate--main/others/Networking_Basics_certificate.jpg"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/others/Networking_Basics_certificate.jpg"
             alt=" Networking Basic Certificate Cisco - Arirama Selvam M" loading="lazy">
           <div class="cert-label">Networking Basic</div>
@@ -1521,26 +1590,36 @@
     <div class="cert-category">
       <h3>🤖 AI &amp; Machine Learning</h3>
       <div class="cert-scroll">
-        <div class="cert-card cert-filter-card" data-domains="software,data,cyber" data-src="res/certificates/AriCertificate--main/pantech/ai_internship-1.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="software,data,cyber"
+          data-src="res/certificates/AriCertificate--main/pantech/ai_internship-1.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/pantech/ai_internship-1.png"
             alt="AI Internship Certificate Pantech - Arirama Selvam M" loading="lazy">
           <div class="cert-label">AI Internship – Pantech</div>
         </div>
-        <div class="cert-card cert-filter-card" data-domains="software,data" data-src="res/certificates/AriCertificate--main/pantech/Ml_Internship_Certificate-1.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="software,data"
+          data-src="res/certificates/AriCertificate--main/pantech/Ml_Internship_Certificate-1.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/pantech/Ml_Internship_Certificate-1.png"
             alt="ML Internship Certificate Pantech - Arirama Selvam M" loading="lazy">
           <div class="cert-label">ML Internship – Pantech</div>
         </div>
-        <div class="cert-card cert-filter-card" data-domains="software,data,cyber,linux,network,fullstack,arvr" data-src="res/certificates/AriCertificate--main/pantech/python_cert-1.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="software,data,cyber,linux,network,fullstack,arvr"
+          data-src="res/certificates/AriCertificate--main/pantech/python_cert-1.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/pantech/python_cert-1.png" alt="Python – Pantech"
             loading="lazy">
           <div class="cert-label">Python – Pantech</div>
         </div>
-        <div class="cert-card cert-filter-card" data-domains="software,data,cyber" data-src="res/certificates/AriCertificate--main/guvi/Ai_chatgpt.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="software,data,cyber"
+          data-src="res/certificates/AriCertificate--main/guvi/Ai_chatgpt.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/guvi/Ai_chatgpt.png" alt="AI & ChatGPT – GUVI" loading="lazy">
           <div class="cert-label">AI &amp; ChatGPT – GUVI</div>
         </div>
-        <div class="cert-card cert-filter-card" data-domains="data,software" data-src="res/certificates/AriCertificate--main/college/power%20bi%20certificate%20.png" style="transition: opacity 0.4s, transform 0.4s;">
+        <div class="cert-card cert-filter-card" data-domains="data,software"
+          data-src="res/certificates/AriCertificate--main/college/power%20bi%20certificate%20.png"
+          style="transition: opacity 0.4s, transform 0.4s;">
           <img src="res/certificates/AriCertificate--main/college/power%20bi%20certificate%20.png"
             alt="Power BI Certificate" loading="lazy">
           <div class="cert-label">Power BI</div>
@@ -1590,7 +1669,7 @@
             style="color:#00f7ff;">github.com/AriProject9787</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/ariramaselvam" target="_blank" rel="me noopener noreferrer"
             style="color:#00f7ff;">linkedin.com/in/ariramaselvam</a></p>
-        <p>Instagram: <a href="https://instagram.com/arirama_selvam" target="_blank" rel="me noopener noreferrer"
+        <p>Instagram: <a href="https://instagram.com/hack_tech_tamil" target="_blank" rel="me noopener noreferrer"
             style="color:#00f7ff;">@hack_tech_tamil</a></p>
 
       </div>
@@ -1606,9 +1685,11 @@
   </div>
 
   <footer>
-    <div class="footer-stats" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 15px; color: #ccc;">
+    <div class="footer-stats"
+      style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 15px; color: #ccc;">
       <div class="stat-item" style="text-align: center;">
-        <span style="display: block; font-size: 1.5rem; color: #00f7ff; font-weight: bold;" id="profile-views-count">-</span>
+        <span style="display: block; font-size: 1.5rem; color: #00f7ff; font-weight: bold;"
+          id="profile-views-count">-</span>
         <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Profile Views</span>
       </div>
       <div class="stat-item" style="text-align: center;">
@@ -1616,7 +1697,8 @@
         <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Events</span>
       </div>
       <div class="stat-item" style="text-align: center;">
-        <span style="display: block; font-size: 1.5rem; color: #00f7ff; font-weight: bold;" id="downloads-count">-</span>
+        <span style="display: block; font-size: 1.5rem; color: #00f7ff; font-weight: bold;"
+          id="downloads-count">-</span>
         <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Downloads</span>
       </div>
     </div>
@@ -1887,7 +1969,7 @@
         console.error("Error fetching stats:", error);
       }
     }
-    
+
     async function incrementStat(statName) {
       try {
         const statsRef = doc(db, "portfolio_stats", "global");
@@ -1997,7 +2079,7 @@
         });
         sessionDocRef = docRef;
         console.log("Session started:", sessionDocRef.id);
-        
+
         // Increment profile views
         incrementStat("profile_views");
       } catch (error) {
@@ -2028,7 +2110,7 @@
     document.addEventListener('click', (e) => {
       const link = e.target.closest('a');
       const isDownload = link && (link.hasAttribute('download') || link.href.includes('.pdf'));
-      
+
       if (isDownload) {
         incrementStat('downloads');
       } else if (e.target.closest('.pub-btn, .btn, .cert-card, .skill-circle, .domain-filter-card, .project-card, .nav-link')) {
@@ -2093,9 +2175,9 @@
         e.preventDefault();
       }
       // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
-      if (e.key === 'F12' || 
-         ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) ||
-         ((e.ctrlKey || e.metaKey) && (e.key === 'U' || e.key === 'u'))) {
+      if (e.key === 'F12' ||
+        ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) ||
+        ((e.ctrlKey || e.metaKey) && (e.key === 'U' || e.key === 'u'))) {
         e.preventDefault();
       }
     });
@@ -2115,25 +2197,25 @@
         const images = [
           "arirama_selvam.jpeg",
           //"Arirama Selvam M.jpeg",
-          "Arirama Selvam.jpeg",
-          "AriramaSelvamM.jpeg",
-          "Arirama_Selvam_M.jpeg",
-          "Arirama_Selvam_M_1.jpeg",
+         // "Arirama Selvam.jpeg",
+         // "AriramaSelvamM.jpeg",
+         // "Arirama_Selvam_M.jpeg",
+         // "Arirama_Selvam_M_1.jpeg",
           //"Arirama_Selvam_M_2.jpeg",
-         // "Arirama_Selvam_M_3.jpeg",
-         // "Arirama_Selvam_M_4.jpeg",
+          // "Arirama_Selvam_M_3.jpeg",
+          "Arirama_Selvam_M_4.jpeg",
           "Arirama_Selvam_M_5.jpeg",
-          "Arirama_Selvam_M_6.jpeg",
+          //"Arirama_Selvam_M_6.jpeg",
           "Arirama_Selvam_M_7.jpeg",
-          "Arirama_Selvam_M_8.jpeg",
-          "Arirama_Selvam_M_9.jpeg",
+          //"Arirama_Selvam_M_8.jpeg",
+         // "Arirama_Selvam_M_9.jpeg",
           "Arirama_Selvam_M_10.jpeg",
-          "Arirama_Selvam_M_11.jpeg",
+         // "Arirama_Selvam_M_11.jpeg",
           //"Arirama_Selvam_M_12.jpeg",
-          "Arirama_Selvam_M_13.jpeg",
-          //"Arirama_Selvam_M_14.jpeg",
-          "Arirama_Selvam_M_15.jpeg",
-          "ariramaselvam.jpeg"
+         // "Arirama_Selvam_M_13.jpeg",
+          "Arirama_Selvam_M_14.jpeg",
+          //"Arirama_Selvam_M_15.jpeg",
+          //"ariramaselvam.jpeg"
         ];
         let currentIndex = 0;
         let slideInterval;
@@ -2189,7 +2271,7 @@
         });
         profileImg.addEventListener("mouseup", () => clearTimeout(pressTimer));
         profileImg.addEventListener("mouseleave", () => clearTimeout(pressTimer));
-        
+
         profileImg.addEventListener("touchstart", (e) => {
           pressTimer = setTimeout(openFullscreen, 500);
         }, { passive: true });
@@ -2203,7 +2285,7 @@
       }
     });
   </script>
-  
+
   <script>
     // ======= Domain Filtering Logic =======
     document.addEventListener("DOMContentLoaded", function () {
@@ -2257,49 +2339,49 @@
       const originalAbout = aboutText ? aboutText.innerHTML : "";
       const resetBtn = document.getElementById("reset-domain-filter");
       const domainCards = document.querySelectorAll(".domain-filter-card");
-      
+
       domainCards.forEach(card => {
         card.addEventListener("click", () => {
           const filter = card.getAttribute("data-filter");
           if (!filter || !personaData[filter]) return;
-          
+
           if (heroSubtitle) {
-             heroSubtitle.style.transition = "opacity 0.3s";
-             heroSubtitle.style.opacity = 0;
-             setTimeout(() => {
-                heroSubtitle.innerHTML = personaData[filter].title + " <span class='cursor'>|</span>";
-                heroSubtitle.style.opacity = 1;
-             }, 300);
+            heroSubtitle.style.transition = "opacity 0.3s";
+            heroSubtitle.style.opacity = 0;
+            setTimeout(() => {
+              heroSubtitle.innerHTML = personaData[filter].title + " <span class='cursor'>|</span>";
+              heroSubtitle.style.opacity = 1;
+            }, 300);
           }
           if (aboutText) {
-             aboutText.style.transition = "opacity 0.3s";
-             aboutText.style.opacity = 0;
-             setTimeout(() => {
-                aboutText.innerHTML = personaData[filter].about;
-                aboutText.style.opacity = 1;
-             }, 300);
+            aboutText.style.transition = "opacity 0.3s";
+            aboutText.style.opacity = 0;
+            setTimeout(() => {
+              aboutText.innerHTML = personaData[filter].about;
+              aboutText.style.opacity = 1;
+            }, 300);
           }
-          
+
           if (resetBtn) resetBtn.style.display = "inline-block";
-          
+
           domainCards.forEach(c => c.style.borderColor = "");
           card.style.borderColor = "#00f7ff";
-          
+
           filterElements(".skill-circle", filter);
           filterElements(".project-filter-card", filter);
           filterElements(".cert-filter-card", filter);
-          
+
           document.querySelectorAll(".cert-category").forEach(cat => {
-             const visibleCards = Array.from(cat.querySelectorAll(".cert-filter-card")).filter(c => c.style.opacity === "1" || c.style.opacity === "");
-             cat.style.display = visibleCards.length === 0 ? "none" : "block";
+            const visibleCards = Array.from(cat.querySelectorAll(".cert-filter-card")).filter(c => c.style.opacity === "1" || c.style.opacity === "");
+            cat.style.display = visibleCards.length === 0 ? "none" : "block";
           });
-          
+
           if (aboutSection) {
-             window.scrollTo({ top: aboutSection.offsetTop - 80, behavior: 'smooth' });
+            window.scrollTo({ top: aboutSection.offsetTop - 80, behavior: 'smooth' });
           }
         });
       });
-      
+
       if (resetBtn) {
         resetBtn.addEventListener("click", () => {
           if (heroSubtitle) {
@@ -2318,40 +2400,40 @@
           }
           resetBtn.style.display = "none";
           domainCards.forEach(c => c.style.borderColor = "");
-          
+
           showAllElements(".skill-circle");
           showAllElements(".project-filter-card");
           showAllElements(".cert-filter-card");
-          
+
           document.querySelectorAll(".cert-category").forEach(cat => {
-             cat.style.display = "block";
+            cat.style.display = "block";
           });
         });
       }
-      
+
       function filterElements(selector, filter) {
         document.querySelectorAll(selector).forEach(el => {
-           const domains = el.getAttribute("data-domains");
-           if (domains && domains.split(",").includes(filter)) {
-              el.style.opacity = 1;
-              el.style.filter = "grayscale(0%)";
-              el.style.pointerEvents = "auto";
-              el.style.order = 0;
-           } else {
-              el.style.opacity = 0.15;
-              el.style.filter = "grayscale(100%)";
-              el.style.pointerEvents = "none";
-              el.style.order = 1;
-           }
+          const domains = el.getAttribute("data-domains");
+          if (domains && domains.split(",").includes(filter)) {
+            el.style.opacity = 1;
+            el.style.filter = "grayscale(0%)";
+            el.style.pointerEvents = "auto";
+            el.style.order = 0;
+          } else {
+            el.style.opacity = 0.15;
+            el.style.filter = "grayscale(100%)";
+            el.style.pointerEvents = "none";
+            el.style.order = 1;
+          }
         });
       }
-      
+
       function showAllElements(selector) {
         document.querySelectorAll(selector).forEach(el => {
-           el.style.opacity = 1;
-           el.style.filter = "grayscale(0%)";
-           el.style.pointerEvents = "auto";
-           el.style.order = 0;
+          el.style.opacity = 1;
+          el.style.filter = "grayscale(0%)";
+          el.style.pointerEvents = "auto";
+          el.style.order = 0;
         });
       }
     });
