@@ -1,0 +1,55 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper: Checks if the user is authenticated as Admin
+    function isAdmin() {
+      return request.auth != null;
+    }
+
+    // 1. IP Blocklist Rules
+    // Public can read to verify if their client IP is blocked;
+    // Only authenticated admin can add, update, or remove blocklist entries.
+    match /blocklist/{blockId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // 2. Global Portfolio Telemetry & Counters
+    // Public can read live stats to display on the hero and footer;
+    // Public can only increment counters ('profile_views', 'events', 'downloads');
+    // Admin has full read and write access.
+    match /portfolio_stats/{statDoc} {
+      allow read: if true;
+      allow create, delete: if isAdmin();
+      allow update: if isAdmin() || (
+        statDoc == 'global' &&
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['profile_views', 'events', 'downloads'])
+      );
+    }
+
+    // 3. Visitor Telemetry Logs
+    // Clients can submit a new visitor telemetry log;
+    // Only authenticated admin can query, view, or delete logs.
+    match /visitor_logs/{logId} {
+      allow create: if request.resource.data.keys().hasAll(['visitor_id', 'timestamp'])
+                    && request.resource.data.visitor_id is string;
+      allow read, update, delete: if isAdmin();
+    }
+
+    // 4. Contact Form Inquiries
+    // Clients can submit inquiry messages;
+    // Only authenticated admin can view the inbox, update, or purge messages.
+    match /contact_messages/{messageId} {
+      allow create: if request.resource.data.keys().hasAll(['name', 'email', 'message', 'timestamp'])
+                    && request.resource.data.email is string
+                    && request.resource.data.message is string;
+      allow read, update, delete: if isAdmin();
+    }
+
+    // 5. Default Lockdown for All Other Collections
+    match /{document=**} {
+      allow read, write: if isAdmin();
+    }
+  }
+}
